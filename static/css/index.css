@@ -1,0 +1,139 @@
+:root { color-scheme: light; --ink: #30343b; --text: #454b54; --muted: #6d7480; --link: #2672a9; --line: #e3e6eb; --soft: #f7f8fa; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 28px; }
+body { margin: 0; color: var(--text); font-family: "Google Sans", "Noto Sans", Arial, sans-serif; font-size: 16px; line-height: 1.8; background: #fff; -webkit-font-smoothing: antialiased; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, summary:focus-visible, .table-scroll:focus-visible { outline: 2px solid var(--link); outline-offset: 5px; }
+p { margin: 0 0 18px; }
+.container { width: min(100% - 48px, 1000px); margin-inline: auto; }
+.reading-width { max-width: 820px; }
+.skip-link { position: absolute; top: -80px; left: 20px; background: #fff; padding: 10px 16px; z-index: 2; }
+.skip-link:focus { top: 12px; }
+.publication-header { padding: 54px 0 18px; text-align: center; }
+h1 { margin: 0 auto 18px; max-width: 1000px; color: var(--ink); font-size: clamp(28px, 3vw, 42px); font-weight: 600; line-height: 1.24; letter-spacing: -.9px; }
+.title-line { display: block; }
+.project-name { font-weight: 700; }
+.venue { margin: 0 0 19px; color: #8b0000; font-size: 19px; line-height: 1.5; font-weight: 600; }
+.venue span { margin-inline: 7px; color: #a77575; }
+.authors { display: flex; flex-wrap: wrap; justify-content: center; gap: 3px 9px; color: var(--ink); font-size: 18px; line-height: 1.7; }
+.authors > span { white-space: nowrap; }
+sup { font-size: .62em; vertical-align: super; line-height: 0; }
+.affiliations { max-width: 860px; margin: 14px auto 0; color: #606874; font-size: 13px; line-height: 1.65; }
+.affiliations p { margin: 3px 0; }
+.author-notes { margin: 11px 0 20px; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.publication-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 9px; }
+.pill { display: inline-flex; justify-content: center; align-items: center; gap: 8px; min-height: 39px; padding: 8px 17px; border: 1px solid #363a41; border-radius: 24px; background: #363a41; color: #fff; font-size: 13px; line-height: 1.5; }
+.pill svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+a.pill:hover { background: #20242b; border-color: #20242b; color: #fff; text-decoration: none; }
+.button-note { font-size: 11px; opacity: .8; }
+.pill.unavailable { background: #f1f2f5; border-color: #e8eaee; color: #747b87; }
+.teaser { padding-top: 14px; padding-bottom: 14px; max-width: 960px; }
+figure { margin: 0; }
+img { display: block; width: 100%; height: auto; }
+.figure-link { display: block; }
+figcaption { max-width: 770px; margin: 16px auto 0; color: var(--muted); text-align: center; font-size: 13px; line-height: 1.75; }
+figcaption strong { font-weight: 500; color: #505965; }
+.section { padding: 52px 0; }
+.soft-background { background: var(--soft); }
+h2 { margin: 0 0 23px; color: var(--ink); text-align: center; font-size: 28px; font-weight: 600; line-height: 1.35; letter-spacing: -.4px; text-wrap: balance; }
+.abstract-text { line-height: 1.85; text-align: left; }
+.abstract-text p:last-child { margin-bottom: 0; }
+strong { color: var(--ink); font-weight: 600; }
+.section-intro { max-width: 730px; margin: 0 auto 30px; color: #636b76; text-align: center; font-size: 15px; line-height: 1.75; }
+#motivation figure { background: #fff; padding: 18px 21px 16px; border: 1px solid #ebedf1; border-radius: 8px; }
+#motivation figcaption { margin-top: 15px; padding-top: 13px; border-top: 1px solid #edf0f3; max-width: 100%; font-size: 12px; }
+.method-steps { list-style: none; padding: 0; margin: 29px 0 0; counter-reset: step; }
+.method-steps li { position: relative; counter-increment: step; padding: 0 0 22px 49px; margin: 0 0 19px; border-bottom: 1px solid #edf0f3; }
+.method-steps li:last-child { margin: 0; border-bottom: 0; }
+.method-steps li::before { content: counter(step); position: absolute; top: 1px; left: 0; display: grid; place-items: center; width: 31px; height: 31px; border-radius: 50%; color: #326d9d; background: #eef3f7; font-size: 14px; font-weight: 600; }
+h3 { margin: 0 0 6px; color: var(--ink); font-size: 17px; font-weight: 600; line-height: 1.5; }
+.method-steps p { margin: 0; color: #636b76; font-size: 15px; line-height: 1.8; }
+.equation { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 22px; margin-top: 15px; padding: 22px 14px; border: 1px solid #e9ecf0; border-radius: 6px; background: #fafbfc; color: #404954; font-family: Georgia, "Times New Roman", serif; font-size: 19px; line-height: 1.5; }
+.equation-divider { width: 1px; height: 24px; background: #dce1e7; }
+.equation-caption { margin: 10px 0 0; text-align: center; font-size: 12px; color: var(--muted); }
+.defaults { margin: 15px 0 0; text-align: center; color: var(--muted); font-size: 12px; }
+.result-source { margin: -7px 0 24px; text-align: center; font-size: 12px; color: var(--muted); }
+.table-hint { display: none; }
+.table-scroll { width: 100%; overflow-x: auto; overscroll-behavior-x: contain; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; font-variant-numeric: tabular-nums; }
+caption { caption-side: bottom; padding: 13px 0 0; text-align: left; color: var(--muted); font-size: 11px; }
+th,td { padding: 12px 13px; text-align: right; white-space: nowrap; border-bottom: 1px solid #e1e5eb; }
+th:first-child,td:first-child { text-align: left; }
+thead th { color: #525a66; font-weight: 600; border-top: 1.5px solid #777e89; border-bottom: 1.5px solid #777e89; font-size: 12px; }
+.dataset-row th { padding-top: 23px; padding-bottom: 9px; text-align: center; color: #535e6c; font-weight: 600; font-size: 13px; background: transparent; }
+.mira-row { background: #edf3f8; }
+.mira-row th { color: #286a9d; }
+.metric-improvement { color: var(--ink); font-weight: 600; }
+.table-note { margin: 14px 0 0; font-size: 11px; line-height: 1.8; color: var(--muted); }
+.results-download { font-size: 12px; margin: 13px 0 0; }
+.controlled-results { margin-top: 26px; padding: 16px 18px; border: 1px solid #dfe4eb; border-radius: 6px; background: #fff; }
+.controlled-results summary { cursor: pointer; color: #525d6a; font-size: 14px; font-weight: 500; }
+.controlled-results[open] summary { margin-bottom: 19px; }
+.controlled-results > p { color: #636b76; font-size: 13px; line-height: 1.8; }
+.citation-heading { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; margin-bottom: 20px; }
+.citation-heading h2 { grid-column: 2; margin: 0; }
+.citation-heading button { grid-column: 3; justify-self: end; }
+button { cursor: pointer; padding: 7px 12px; border: 1px solid #d6dce4; border-radius: 5px; background: #fff; color: #606a76; font: inherit; font-size: 12px; line-height: 1.5; }
+button:hover { background: var(--soft); }
+pre { max-width: 100%; margin: 0; padding: 22px; overflow-x: auto; border: 1px solid #e7eaf0; border-radius: 6px; background: #f8f9fb; color: #4b5664; font-size: 12px; line-height: 1.85; }
+code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+.citation-tools { display: flex; flex-wrap: wrap; gap: 10px 20px; margin: 12px 0 0; font-size: 12px; }
+#copy-status { color: var(--muted); }
+footer { padding: 28px 0; border-top: 1px solid #edf0f3; background: #fafbfc; text-align: center; color: #7c8490; font-size: 11px; }
+footer p { margin: 3px 0; }
+@media (max-width: 800px) {
+  h1 { font-size: 35px; }
+  .title-line { display: inline; }
+  .title-line + .title-line::before { content: " "; }
+  .authors { font-size: 17px; }
+  .teaser { max-width: 930px; }
+  .equation { font-size: 18px; gap: 16px; }
+}
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+  .container { width: calc(100% - 32px); }
+  .publication-header { padding: 35px 0 16px; }
+  h1 { font-size: 28px; line-height: 1.27; letter-spacing: -.55px; text-wrap: balance; margin-bottom: 16px; }
+  .venue { font-size: 17px; margin-bottom: 17px; }
+  .authors { font-size: 15px; gap: 3px 6px; }
+  .affiliations { font-size: 11px; line-height: 1.65; margin-top: 13px; }
+  .affiliations p { margin: 5px 0; }
+  .desktop-break { display: none; }
+  .author-notes { font-size: 10px; margin: 12px 0 17px; }
+  .publication-links { max-width: 370px; margin-inline: auto; gap: 8px; }
+  .pill { min-height: 38px; padding: 8px 14px; font-size: 12px; }
+  .pill svg { width: 14px; height: 14px; }
+  .button-note { font-size: 10px; }
+  .teaser { padding-top: 12px; padding-bottom: 12px; }
+  figcaption { font-size: 11px; line-height: 1.7; margin-top: 13px; }
+  .section { padding: 37px 0; }
+  h2 { font-size: 25px; margin-bottom: 21px; }
+  .section-intro { font-size: 13px; margin-bottom: 24px; }
+  #motivation figure { padding: 12px 10px; border-radius: 5px; }
+  #motivation figcaption { font-size: 11px; }
+  .abstract-text { font-size: 14px; line-height: 1.85; }
+  .method-steps { margin-top: 25px; }
+  .method-steps li { padding-left: 41px; padding-bottom: 17px; margin-bottom: 18px; }
+  .method-steps li::before { width: 27px; height: 27px; font-size: 12px; }
+  h3 { font-size: 15px; }
+  .method-steps p { font-size: 13px; }
+  .equation { flex-direction: column; gap: 12px; padding: 20px 8px; font-size: 16px; }
+  .equation-divider { display: none; }
+  .equation-caption,.defaults { font-size: 10px; }
+  .result-source { font-size: 10px; margin-bottom: 10px; }
+  .table-hint { display: block; margin: 0 0 14px; color: #828a96; font-size: 10px; text-align: center; }
+  table { font-size: 12px; }
+  th,td { padding: 11px 10px; }
+  thead th { font-size: 11px; }
+  .dataset-row th { text-align: left; font-size: 11px; }
+  caption,.table-note { font-size: 10px; }
+  .controlled-results { padding: 14px 12px; }
+  .controlled-results summary { font-size: 12px; }
+  .controlled-results > p { font-size: 12px; }
+  .citation-heading { grid-template-columns: 1fr auto; }
+  .citation-heading h2 { grid-column: 1; text-align: left; }
+  .citation-heading button { grid-column: 2; }
+  pre { font-size: 10px; padding: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
