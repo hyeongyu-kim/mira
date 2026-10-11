@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#2869a4"/><path d="M14 46V18h7l11 17 11-17h7v28h-7V29L32 45 21 29v17z" fill="#fff"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>MIRA mummy</title>
+  <path d="M47 14c5-5 9-4 12-1l-5 9-8-2" fill="#fff4dc" stroke="#594a3f" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="7" y="6" width="48" height="53" rx="22" fill="#fff4dc" stroke="#594a3f" stroke-width="3"/>
+  <path d="m14 13 38 9M8 23l46-9M9 46l44 6M14 55l39-13" stroke="#d6c4a4" stroke-width="3" stroke-linecap="round"/>
+  <path d="M8 27c13-4 33-4 46 0v14c-13 4-33 4-46 0Z" fill="#ead9b8"/>
+  <ellipse cx="23" cy="33" rx="4.5" ry="6" fill="#594a3f"/>
+  <ellipse cx="40" cy="33" rx="4.5" ry="6" fill="#594a3f"/>
+  <circle cx="24" cy="31" r="1.4" fill="#fffaf0"/>
+  <circle cx="41" cy="31" r="1.4" fill="#fffaf0"/>
+  <ellipse cx="15.5" cy="41" rx="4.5" ry="2.5" fill="#efa599"/>
+  <ellipse cx="47.5" cy="41" rx="4.5" ry="2.5" fill="#efa599"/>
+  <path d="M28 43q3.5 4 7 0" stroke="#594a3f" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="7" y="6" width="48" height="53" rx="22" stroke="#594a3f" stroke-width="3"/>
+</svg>
