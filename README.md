@@ -6,7 +6,7 @@ Hyeongyu Kim, Mingyeong Jang, Youngjun Song, GeonHui Han, Dosik Hwang · NeurIPS
 
 [Paper / OpenReview](https://openreview.net/forum?id=ujUYtJK5LG) ·
 [Project page](https://hyeongyu-kim.github.io/mira/) ·
-[Results and protocols](docs/RESULTS.md) · [Reproducibility](docs/REPRODUCIBILITY.md)
+[Results and protocols](docs/RESULTS.md) · [Reproducibility](docs/REPRODUCIBILITY.md) · [Code/paper semantics](docs/CODE_SEMANTICS.md)
 
 This repository provides **TENT and TENT+MIRA for CNNs and ViT-B/16**, together with
 objective, reliability-gating and perturbation controls. MIRA probes cached features with
@@ -92,7 +92,7 @@ sample weights alone are not treated as gradient matching.
 
 CNN rows below are the archived three-seed camera-ready reference for **Table 2, TENT rows** (full deviations and seed values: Tables 26 / 27).
 Accuracy is mean ± sample SD in percentage points; the other columns show means.
-Fresh release checks are reported separately in [Reproducibility](docs/REPRODUCIBILITY.md).
+Fresh release checks are reported separately in [Reproducibility](docs/REPRODUCIBILITY.md) · [Code/paper semantics](docs/CODE_SEMANTICS.md).
 
 | Dataset / backbone | Method | Accuracy (%) | MMC | ECE | NLL |
 |---|---|---:|---:|---:|---:|
@@ -157,3 +157,7 @@ The implementation follows the [test-time-adaptation framework](https://github.c
 and RobustBench. Source notices are retained; see [licenses and attribution](docs/THIRD_PARTY.md).
 The existing project webpage remains in `index.html` and `static/`; GitHub Pages serves the
 root of `main`. README figure slots are reserved for final assets.
+
+Configurations for the main CNN/ViT recipes live directly under `code/configs/`;
+other controls are grouped by study in `code/configs/ablations/`. Large detailed logs
+are packaged as four archives, with browsable seed/summary CSVs retained in `code/results/`.

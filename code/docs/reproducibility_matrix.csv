@@ -1,5 +1,5 @@
 paper_item,pdf_page,scope,verified_status,public_command_or_config,limitations
-Table 1 / 6,8 / 14,ImageNet-C ResNet34 objectives/gates,archived means/SD verified; representative Full fresh seed1,configs/in34_*.json,All other objectives not re-executed in this release pass
+Table 1 / 6,8 / 14,ImageNet-C ResNet34 objectives/gates,archived means/SD verified; representative Full fresh seed1,configs/ablations/loss_table2/in34_*.json,All other objectives not re-executed in this release pass
 Table 2 TENT rows,8,CIFAR100 ResNeXt and ImageNet ResNet50,archived cells verified; fresh main seeds1/2/3 both methods,scripts/run_main.sh,Last printed digits/SD can differ; fresh evidence separated
 Table 3 ViT historical,9,42.03/45.17 single-run rows,original complete provenance unresolved,none,Do not label current profile exact historical Table3 reproduction
 Release ViT batch64 v1,separate release,TENT/MIRA 45.96/50.02 seed1,two complete current reference runs; paired streams verified,scripts/run_vit.sh,Seeds2/3 configs ready but unmeasured

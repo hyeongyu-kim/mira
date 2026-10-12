@@ -98,12 +98,12 @@ covering the endpoints and first/last interpolation intervals. Grid and K sweeps
 All paths below are relative to [code/results](../code/results/):
 
 - `seed_results.csv`, `mean_sd_summary.csv`, `paired_seed_differences.csv`: 217 archived CNN runs.
-- `cnn_reference/`: per-run portable config/provenance, corruption metrics, compressed batch logs,
+- `diagnostics/cnn_reference.tar.gz`: per-run portable config/provenance, corruption metrics, compressed batch logs,
   matched-stream and actual-gradient audits.
-- `release_validation_*.csv`, `release_validation/`: fresh CNN checks, kept separate from the archive.
+- `release_validation_*.csv`, `diagnostics/cnn_release_checks.tar.gz`: fresh CNN checks, kept separate from the archive.
 - `vit_seed_results.csv`, `vit_mean_sd_summary.csv`, `vit_results.tex`: current batch-64 seed-1 reference.
-- `vit_paired_*differences.csv`, `vit_validation/`: paired differences and complete current ViT diagnostics.
-- `archive/vit_batch128/`: the previous measured ViT profile, never pooled with batch 64.
+- `vit_paired_*differences.csv`, `diagnostics/vit_batch64.tar.gz`: paired differences and complete current ViT diagnostics.
+- `archive/vit_batch128/` and `diagnostics/vit_batch128.tar.gz`: the previous measured ViT profile, never pooled with batch 64.
 
 The explicitly labeled `c100_published_table23_s1` row is an older single-run unweighted HE+EH,
 ρ=.95 historical control. Its separate scientific group is retained for traceability and is

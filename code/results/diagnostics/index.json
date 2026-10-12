@@ -1,0 +1,30 @@
+[
+  {
+    "archive": "results/diagnostics/cnn_reference.tar.gz",
+    "original_directory": "results/cnn_reference",
+    "files": 658,
+    "sha256": "6b52340a3fd4205f940621424701c08cf6d3f0d5571f6586a94a75e0af23a64d",
+    "all_original_file_hashes_verified": true
+  },
+  {
+    "archive": "results/diagnostics/cnn_release_checks.tar.gz",
+    "original_directory": "results/release_validation",
+    "files": 117,
+    "sha256": "b732a941a1fb4895f33a4d6c20d31e32571988e3ca4ec7933e9c92570af8bb6d",
+    "all_original_file_hashes_verified": true
+  },
+  {
+    "archive": "results/diagnostics/vit_batch64.tar.gz",
+    "original_directory": "results/vit_validation",
+    "files": 19,
+    "sha256": "d7f37d1d1787c9963adb33e91c1747a576ff8cb3fa44895e729b7c9f515b0555",
+    "all_original_file_hashes_verified": true
+  },
+  {
+    "archive": "results/diagnostics/vit_batch128.tar.gz",
+    "original_directory": "results/archive/vit_batch128/vit_validation",
+    "files": 48,
+    "sha256": "19b601aba30943ec900c4d08c3e8cd9396e7499648c358385fbce206b664649d",
+    "all_original_file_hashes_verified": true
+  }
+]

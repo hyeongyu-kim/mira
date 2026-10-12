@@ -24,7 +24,7 @@ recorded-RNG-group failures. The 45 global gradient-norm controls have maximum a
 norm error 0.000248432. The RNG audit uses the first batch of each corruption where a CUDA
 state hash was actually saved; it does not invent hashes for earlier runs. Six early runs lack
 a recorded worker hash; their configs/checkpoints/metrics are retained and this limit is listed
-in `results/cnn_reference/reproducibility_audit.json`.
+in `cnn_reference/reproducibility_audit.json` inside `results/diagnostics/cnn_reference.tar.gz`.
 
 ## Fresh full checks
 
