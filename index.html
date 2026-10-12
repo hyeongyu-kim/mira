@@ -83,7 +83,7 @@
           <a class="figure-link" href="static/images/confidence-trajectories-camera-ready.png?v=20261012-camera-ready" target="_blank" rel="noopener noreferrer" aria-label="Open the accuracy and confidence figure at full resolution">
             <img src="static/images/confidence-trajectories-camera-ready.png?v=20261012-camera-ready" width="2376" height="713" loading="lazy" alt="Online TENT and TENT+MIRA accuracy and confidence on ImageNet-C fog: overconfident ResNet-34 and underconfident EfficientNet-B0. Shading and bars show the absolute accuracy–confidence gap." decoding="async">
           </a>
-          <figcaption>Online accuracy and confidence from Figure 2 of the camera-ready manuscript. Shading and bars show the absolute accuracy–confidence gap.</figcaption>
+          <figcaption>Online accuracy and confidence. Shading and bars show the absolute accuracy–confidence gap.</figcaption>
         </figure>
       </div>
     </section>
@@ -109,19 +109,17 @@
           <span>MI = HE − EH</span><span class="equation-divider" aria-hidden="true"></span><span>ℒ = mean<sub>i</sub> [w<sub>i</sub> (HE<sub>i</sub> + γ EH<sub>i</sub>)]</span>
         </div>
         <p class="equation-caption">HE: entropy of the mean prediction. EH: mean predictive entropy.</p>
-        <p class="defaults">Shared defaults: α = 0.03 · ρ = 0.90 · τ = 0.25 · γ = 1 · K = 300 · batch size = 64</p>
-      </div>
+        </div>
     </section>
 
     <section class="section" id="results">
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Accuracy and calibration</h2>
-        <p class="section-intro">A matched comparison of TENT and TENT + MIRA under the additional camera-ready evaluation.</p>
-        <div class="result-source">Additional evaluation · 10 October 2026 · seeds 1, 2, 3</div>
+        <p class="section-intro">TENT with and without MIRA.</p>
         <p class="table-hint">Scroll horizontally to see all metrics →</p>
         <div class="table-scroll" tabindex="0" role="region" aria-label="Main comparison results; scroll horizontally on small screens">
           <table class="table is-fullwidth results-table">
-            <caption>Mean ± sample standard deviation. Accuracy and its SD are in percent and percentage points, respectively.</caption>
+            <caption>Mean ± standard deviation.</caption>
             <thead><tr>
 <th scope="col">Method</th>
 <th scope="col">Accuracy (%) ↑</th>
@@ -165,14 +163,12 @@
             </tbody>
           </table>
         </div>
-        <p class="table-note">Severity 5, reset for each corruption, 15 corruptions, K = 300, batch size 64. CIFAR-100-C uses ResNeXt AugMix with SGD lr = 0.001; ImageNet-C uses ResNet-50 with SGD lr = 0.00025. ECE uses 10 equal-width bins.</p>
-        <p class="results-download"><a href="static/data/evaluation.csv" download>Download these results and settings (CSV)</a></p>
         <details class="controlled-results">
           <summary>What changes when gradient norms are matched?</summary>
           <p>The stochastic objective accounts for much of the adaptation gain. The incremental effect of reliability weighting depends on the protocol. In a separate control with the global L2 norm of the adaptation gradient fixed to 1, full MIRA improves CIFAR accuracy relative to TENT, but falls below TENT on ImageNet-C. This control changes the update scale and is evaluated separately from the main comparison above.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Separate gradient norm control results">
             <table class="table is-fullwidth results-table">
-              <caption>Separate control: global adaptation gradient L2 norm = 1. Mean ± sample SD over seeds 1, 2, 3.</caption>
+              <caption>Gradient-norm control (global L2 norm = 1).</caption>
               <thead><tr>
 <th scope="col">Method</th>
 <th scope="col">Accuracy (%) ↑</th>
@@ -224,8 +220,7 @@
               </tbody>
             </table>
           </div>
-          <p class="table-note">CIFAR-10-C: WRN AugMix, Adam lr = 0.001, 4 corruptions, K = 100. CIFAR-100-C and ImageNet-C retain their respective SGD settings and K = 300. All controls use severity 5 and reset for each corruption.</p>
-        </details>
+          </details>
       </div>
     </section>
 
@@ -245,7 +240,7 @@
   year = {2026},
   url = {https://openreview.net/forum?id=ujUYtJK5LG}
 }</code></pre>
-        <p class="citation-tools"><a href="static/files/mira.bib" download>Download .bib</a><span id="copy-status" role="status" aria-live="polite"></span></p>
+        <p class="citation-tools"><span id="copy-status" role="status" aria-live="polite"></span></p>
       </div>
     </section>
   </main>
