@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "selected_profile": "vit_b16_torchvision_batch64_v2",
+  "cpu_tests": 22,
+  "gpu_smokes": [
+    {
+      "method": "tent",
+      "run_id": "vit_recovery_torchvision_lr00025_bs64_tent_s1",
+      "status": "smoke_only",
+      "checks": {
+        "classifier_unchanged": true,
+        "sample_weights_detached": true,
+        "finite_gradients": true,
+        "source_reset_verified": true
+      },
+      "delta_vs_measured_configuration_smoke": {
+        "accuracy_percent": 0.0,
+        "mmc": 0.0,
+        "ece": 0.0,
+        "nll": 0.0
+      }
+    },
+    {
+      "method": "full",
+      "run_id": "vit_recovery_torchvision_lr00025_bs64_full_s1",
+      "status": "smoke_only",
+      "checks": {
+        "classifier_unchanged": true,
+        "sample_weights_detached": true,
+        "finite_gradients": true,
+        "source_reset_verified": true
+      },
+      "delta_vs_measured_configuration_smoke": {
+        "accuracy_percent": 0.0,
+        "mmc": 0.0,
+        "ece": 0.0,
+        "nll": 0.0
+      }
+    }
+  ],
+  "scientific_worker_unchanged": true,
+  "scope": "New default CLI/asset dispatch on torchvision; two batches per method, no new full benchmark rows",
+  "publication": "held by user",
+  "checkpoint_sha256": "c867db91d3e12c6cbadabb610d73c24a546bf82d8c03a9fea34f43a712ddb0e9"
+}

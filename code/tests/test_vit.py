@@ -5,6 +5,7 @@ import unittest
 import torch
 from torch import nn
 from timm.models.vision_transformer import VisionTransformer
+from torchvision.models.vision_transformer import VisionTransformer as TorchvisionTransformer
 
 from mira import MIRA, MIRAConfig
 
@@ -62,6 +63,29 @@ class ViTTests(unittest.TestCase):
         self.assertTrue(torch.equal(observed, expected))
         for name, value in public.model.state_dict().items():
             self.assertTrue(torch.equal(value, reference.model.state_dict()[name]), name)
+
+
+class TorchvisionViTTests(ViTTests):
+    def setUp(self):
+        torch.set_num_threads(1)
+        torch.manual_seed(19)
+        self.model = TorchvisionTransformer(image_size=32, patch_size=16, num_layers=2,
+                                            num_heads=3, hidden_dim=24, mlp_dim=48, num_classes=5)
+        # torchvision initializes an untrained head to zero; use a nonconstant classifier.
+        nn.init.normal_(self.model.heads.head.weight, std=.08)
+        self.images = torch.randn(4, 3, 32, 32)
+        self.config = MIRAConfig(K=12, sigma_grid=(.01, .1, 1.), lr=.00025)
+
+    def test_feature_cache_is_cls_token_classifier_input(self):
+        adapter = MIRA(self.model, self.config)
+        model = adapter.model.base
+        with torch.no_grad():
+            expected_logits = model(self.images)
+            captured = adapter.model.extract_last_features(self.images)
+            reconstructed = nn.functional.linear(captured, model.heads.head.weight, model.heads.head.bias)
+        self.assertEqual(tuple(captured.shape), (4, 24))
+        self.assertTrue(torch.equal(expected_logits, reconstructed))
+        self.assertIs(adapter.model.last_layer, model.heads.head)
 
 
 if __name__ == '__main__':

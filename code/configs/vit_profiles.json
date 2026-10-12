@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "default_profile": "vit_b16_batch64_v1",
+  "default_profile": "vit_b16_torchvision_batch64_v2",
   "profiles": {
-    "vit_b16_batch64_v1": {
-      "description": "Current release reference, batch64; seed1 measured",
+    "vit_b16_torchvision_batch64_v2": {
+      "description": "Selected torchvision ViT-B/16, SGD LR0.00025/batch64; seed1 measured",
       "default_seeds": [
         1
       ],
@@ -25,6 +25,46 @@
         }
       },
       "reference_results": "results/vit_seed_results.csv",
+      "reported_seed_metrics": {
+        "1": {
+          "tent": {
+            "accuracy_percent": "41.64",
+            "mmc": "0.5170",
+            "ece": "0.1167",
+            "nll": "3.0582"
+          },
+          "full": {
+            "accuracy_percent": "44.76",
+            "mmc": "0.4908",
+            "ece": "0.0549",
+            "nll": "2.8406"
+          }
+        }
+      }
+    },
+    "vit_b16_batch64_v1": {
+      "description": "Previous timm batch64/LR0.001 release reference; seed1 measured",
+      "default_seeds": [
+        1
+      ],
+      "available_seeds": [
+        1,
+        2,
+        3
+      ],
+      "configs": {
+        "tent": {
+          "1": "configs/vit/timm_batch64_v1/vit_b16_tent_s1.json",
+          "2": "configs/vit/timm_batch64_v1/vit_b16_tent_s2.json",
+          "3": "configs/vit/timm_batch64_v1/vit_b16_tent_s3.json"
+        },
+        "full": {
+          "1": "configs/vit/timm_batch64_v1/vit_b16_full_s1.json",
+          "2": "configs/vit/timm_batch64_v1/vit_b16_full_s2.json",
+          "3": "configs/vit/timm_batch64_v1/vit_b16_full_s3.json"
+        }
+      },
+      "reference_results": "results/archive/vit_timm_batch64_v1/vit_seed_results.csv",
       "reported_seed_metrics": {
         "1": {
           "tent": {

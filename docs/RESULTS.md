@@ -22,35 +22,43 @@ TENT learning-rate protocol; older submission/rebuttal protocols must not be poo
 TENT rows use seeds 2/4/6; they are a separate retained comparison, outside this default
 profile and its seeds 1/2/3. No exact Table 28 replay command is claimed here.
 
-## Selected ViT batch-64 reference
+## Selected torchvision ViT batch-64 reference
 
 These are **newly measured seed-1 results** selected for the code release. No multi-seed
 uncertainty is implied:
 
 | Method | Accuracy (%) | MMC | ECE | NLL |
 |---|---:|---:|---:|---:|
-| TENT | 45.96 | 0.7330 | 0.2736 | 4.0038 |
-| TENT+MIRA | 50.02 | 0.6393 | 0.1410 | 2.9037 |
+| TENT | 41.64 | 0.5170 | 0.1167 | 3.0582 |
+| TENT+MIRA | 44.76 | 0.4908 | 0.0549 | 2.8406 |
 
-The source is timm `vit_base_patch16_224.orig_in21k_ft_in1k`, checkpoint
-`jx_vit_base_p16_224-80ecf9dd.pth`. SGD is 0.001 with momentum 0.9, Nesterov and zero
+The source is torchvision `vit_b_16`, checkpoint
+`vit_b_16-c867db91.pth`. SGD is 0.00025 with momentum 0.9, Nesterov and zero
 weight decay. The evaluation uses batch 64, one update per batch, 15 severity-5 corruptions,
-10,000 samples each and reset per corruption. Input mean/std is (0.5,0.5,0.5).
+10,000 samples each and reset per corruption. Input mean is (.485,.456,.406),
+std (.229,.224,.225); already-224×224 images use PIL RGB and ToTensor.
 Only LayerNorm weight and bias adapt (50 tensors, 38,400 parameters).
 
 MIRA uses α=.03, ρ=.90, τ=.25, γ=1, K=300, feature-wise He-in perturbations and the
 original 16-radius grid. No hyperparameter was selected from target labels. The paired
-changes are +4.0613 accuracy percentage points, −0.132639 ECE and −1.100149 NLL.
-Accuracy improves in 11/15 corruptions; ECE and NLL improve in 14/15. Impulse-noise accuracy
-decreases by 17.77 points, so the mean result must not be described as improvement on every
-corruption. No-feasible/fallback frequency is 94.862%; selected sigma mean is 0.9661,
-median 1, and range [0.5,2]. A low ECE by itself does not establish better prediction quality.
+changes are +3.1200 accuracy percentage points, −0.061848 ECE and −0.217654 NLL.
+Accuracy, ECE and NLL each improve in 14/15 corruptions. Frost accuracy decreases by
+2.66 points and NLL increases by 0.1286; brightness ECE increases by 0.0122.
+No-feasible/fallback frequency is 99.6178%; selected sigma mean is 0.9738,
+median 1, and range [0.3,1]. No endpoint/first-or-last-interval selections occur;
+interpolation occurs in 9/2,355 batches. This is performance of the existing fallback path
+on most batches, not evidence of joint feasibility or an unconditional agreement guarantee.
 
-Historical paper Table 3, page 9, reports 42.03/45.17% accuracy; the original complete
-checkpoint/config/log provenance was not recovered. Those rows are retained only as an
-explicitly unresolved historical comparison in `vit_vs_paper_table3.csv`. The selected
-batch-64 reference is not claimed to reproduce those numbers. The previous batch-128
-three-seed validation is in `results/archive/vit_batch128/`, with a separate executable profile.
+Historical paper Table 3, page 9, reports 42.03/45.17% accuracy, ECE .1141/.0529 and
+NLL 3.0312/2.8159. MMC .5178/.4925 comes from the rebuttal rather than Table 3.
+The supplied configuration image confirms ImageNet-C, LR0.00025 and batch64; it does
+not identify checkpoint, seed or complete stream. The selected reconstruction is lower by
+0.3927/0.4127 accuracy points; its gain +3.1200 is close to the reported +3.14 points.
+`vit_vs_paper_table3.csv` retains every metric difference without claiming exact historical provenance.
+The previous timm LR0.001/batch64 reference (45.96/50.02%) is in
+`results/archive/vit_timm_batch64_v1/`, under profile `vit_b16_batch64_v1`.
+Previous batch128 three-seed validation is in `results/archive/vit_batch128/`.
+Neither older protocol is pooled with this torchvision profile.
 
 ## Supported appendix comparisons
 
@@ -102,7 +110,9 @@ All paths below are relative to [code/results](../code/results/):
   matched-stream and actual-gradient audits.
 - `release_validation_*.csv`, `diagnostics/cnn_release_checks.tar.gz`: fresh CNN checks, kept separate from the archive.
 - `vit_seed_results.csv`, `vit_mean_sd_summary.csv`, `vit_results.tex`: current batch-64 seed-1 reference.
-- `vit_paired_*differences.csv`, `diagnostics/vit_batch64.tar.gz`: paired differences and complete current ViT diagnostics.
+- `vit_paired_*differences.csv`, `vit_paired_stream_audit.csv`, `diagnostics/vit_torchvision_batch64_v2.tar.gz`: current torchvision evidence.
+- `vit_sigma_*.csv`, `vit_runtime_memory.csv`: selected-profile diagnostics and separate compute/wall/VRAM records.
+- `archive/vit_timm_batch64_v1/`, `diagnostics/vit_timm_batch64_v1.tar.gz`: previous timm batch64 reference.
 - `archive/vit_batch128/` and `diagnostics/vit_batch128.tar.gz`: the previous measured ViT profile, never pooled with batch 64.
 
 The explicitly labeled `c100_published_table23_s1` row is an older single-run unweighted HE+EH,

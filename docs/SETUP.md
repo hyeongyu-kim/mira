@@ -63,6 +63,7 @@ and byte sizes are in [reference_manifest.json](../code/reference_manifest.json)
 | `cifar10/corruptions/Hendrycks2020AugMix_WRN.pt` | RobustBench GDrive ID `1wy7gSRsUZzCzj8QhmTbcnwmES_2kkNph` |
 | `resnet50-0676ba61.pth` | [torchvision ResNet-50 V1](https://download.pytorch.org/models/resnet50-0676ba61.pth) |
 | `resnet34-b627a593.pth` | [torchvision ResNet-34 V1](https://download.pytorch.org/models/resnet34-b627a593.pth) |
+| `vit_b_16-c867db91.pth` | [torchvision ViT-B/16 V1, selected reference](https://download.pytorch.org/models/vit_b_16-c867db91.pth) |
 | `jx_vit_base_p16_224-80ecf9dd.pth` | [timm ViT-B/16 orig_in21k_ft_in1k](https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vitjx/jx_vit_base_p16_224-80ecf9dd.pth) |
 
 CIFAR AugMix weights are the unmodified RobustBench checkpoint files, including any prefix
@@ -76,8 +77,9 @@ export MIRA_CHECKPOINT_ROOT=/path/to/source-checkpoints
 export MIRA_RESULTS_ROOT=/path/to/results
 export CUDA_VISIBLE_DEVICES=0
 python scripts/check_assets.py --scope main --check-data  # two headline CNN weights
-python scripts/check_assets.py --scope vit --check-data   # ViT only
-python scripts/check_assets.py --scope all --check-data   # six weights and all datasets
+python scripts/check_assets.py --scope vit --check-data   # selected torchvision ViT only
+python scripts/check_assets.py --scope vit --vit-profile vit_b16_batch64_v1 --check-data  # previous timm checkpoint
+python scripts/check_assets.py --scope all --check-data   # five CNN weights, selected ViT, all datasets
 ```
 
 ## Commands, outputs and resume

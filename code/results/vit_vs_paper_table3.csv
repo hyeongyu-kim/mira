@@ -1,9 +1,9 @@
-paper,table,pdf_page,method,seed,metric,paper_reported_single_run,fresh_batch64,difference_fresh_minus_reported,rounded_match,historical_protocol,fresh_protocol
-NeurIPS_2026_MIRA_camera_ready_v1.pdf,3,9,tent,1,accuracy_percent,42.03,45.955333560705185,3.925333560705184,False,unresolved; MMC from rebuttal,ImageNetC_timm_ViTB16_orig_in21k_ft_in1k_reset_sgd_lr0.001_bs64
-NeurIPS_2026_MIRA_camera_ready_v1.pdf,3,9,tent,1,mmc,0.5178,0.7329940756162008,0.21519407561620074,False,unresolved; MMC from rebuttal,ImageNetC_timm_ViTB16_orig_in21k_ft_in1k_reset_sgd_lr0.001_bs64
-NeurIPS_2026_MIRA_camera_ready_v1.pdf,3,9,tent,1,ece,0.1141,0.2735949196074216,0.15949491960742163,False,unresolved; MMC from rebuttal,ImageNetC_timm_ViTB16_orig_in21k_ft_in1k_reset_sgd_lr0.001_bs64
-NeurIPS_2026_MIRA_camera_ready_v1.pdf,3,9,tent,1,nll,3.0312,4.003813656171163,0.9726136561711627,False,unresolved; MMC from rebuttal,ImageNetC_timm_ViTB16_orig_in21k_ft_in1k_reset_sgd_lr0.001_bs64
-NeurIPS_2026_MIRA_camera_ready_v1.pdf,3,9,full,1,accuracy_percent,45.17,50.01666635274887,4.846666352748869,False,unresolved; MMC from rebuttal,ImageNetC_timm_ViTB16_orig_in21k_ft_in1k_reset_sgd_lr0.001_bs64
-NeurIPS_2026_MIRA_camera_ready_v1.pdf,3,9,full,1,mmc,0.4925,0.6392824451128641,0.14678244511286415,False,unresolved; MMC from rebuttal,ImageNetC_timm_ViTB16_orig_in21k_ft_in1k_reset_sgd_lr0.001_bs64
-NeurIPS_2026_MIRA_camera_ready_v1.pdf,3,9,full,1,ece,0.0529,0.1409560896990418,0.0880560896990418,False,unresolved; MMC from rebuttal,ImageNetC_timm_ViTB16_orig_in21k_ft_in1k_reset_sgd_lr0.001_bs64
-NeurIPS_2026_MIRA_camera_ready_v1.pdf,3,9,full,1,nll,2.8159,2.903664962450663,0.08776496245066312,False,unresolved; MMC from rebuttal,ImageNetC_timm_ViTB16_orig_in21k_ft_in1k_reset_sgd_lr0.001_bs64
+checkpoint_candidate,method,seed,metric,paper_reported,new_measurement,new_minus_reported,matches_reported_precision,paper_source
+torchvision,TENT+MIRA,1,accuracy_percent,45.17,44.757333199183144,-0.4126668008168579,False,camera-ready Table3; MMC from rebuttal; original checkpoint/seed still unconfirmed
+torchvision,TENT+MIRA,1,mmc,0.4925,0.4908097624778748,-0.0016902375221252153,False,camera-ready Table3; MMC from rebuttal; original checkpoint/seed still unconfirmed
+torchvision,TENT+MIRA,1,ece,0.0529,0.05489186933361149,0.001991869333611486,False,camera-ready Table3; MMC from rebuttal; original checkpoint/seed still unconfirmed
+torchvision,TENT+MIRA,1,nll,2.8159,2.840585962931315,0.024685962931314975,False,camera-ready Table3; MMC from rebuttal; original checkpoint/seed still unconfirmed
+torchvision,TENT,1,accuracy_percent,42.03,41.6373336315155,-0.3926663684844982,False,camera-ready Table3; MMC from rebuttal; original checkpoint/seed still unconfirmed
+torchvision,TENT,1,mmc,0.5178,0.5170460780461629,-0.0007539219538371666,False,camera-ready Table3; MMC from rebuttal; original checkpoint/seed still unconfirmed
+torchvision,TENT,1,ece,0.1141,0.11673956897326813,0.0026395689732681415,False,camera-ready Table3; MMC from rebuttal; original checkpoint/seed still unconfirmed
+torchvision,TENT,1,nll,3.0312,3.0582404295603434,0.02704042956034325,False,camera-ready Table3; MMC from rebuttal; original checkpoint/seed still unconfirmed

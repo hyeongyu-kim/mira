@@ -14,11 +14,12 @@
     "all_original_file_hashes_verified": true
   },
   {
-    "archive": "results/diagnostics/vit_batch64.tar.gz",
+    "archive": "results/diagnostics/vit_timm_batch64_v1.tar.gz",
     "original_directory": "results/vit_validation",
     "files": 19,
     "sha256": "d7f37d1d1787c9963adb33e91c1747a576ff8cb3fa44895e729b7c9f515b0555",
-    "all_original_file_hashes_verified": true
+    "all_original_file_hashes_verified": true,
+    "profile": "vit_b16_batch64_v1"
   },
   {
     "archive": "results/diagnostics/vit_batch128.tar.gz",
@@ -26,5 +27,13 @@
     "files": 48,
     "sha256": "19b601aba30943ec900c4d08c3e8cd9396e7499648c358385fbce206b664649d",
     "all_original_file_hashes_verified": true
+  },
+  {
+    "archive": "results/diagnostics/vit_torchvision_batch64_v2.tar.gz",
+    "profile": "vit_b16_torchvision_batch64_v2",
+    "files": 85,
+    "sha256": "b44d2945af6ed1ccffba7746b41d44ea0b4942f0d7f4b44ad3f1298d278af5ab",
+    "all_export_file_hashes_verified": true,
+    "note": "Original file hashes retained in export_index; paths made portable; feature vectors omitted from exports only. Actual configs/provenance and boundary RNG states retained."
   }
 ]

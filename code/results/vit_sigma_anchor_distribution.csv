@@ -1,0 +1,4 @@
+checkpoint_candidate,selected_idx_anchor,sigma_grid_value,batches,fraction
+torchvision,9,0.30000001192092896,1,0.0004246284501061571
+torchvision,10,0.5,119,0.0505307855626327
+torchvision,11,1.0,2235,0.9490445859872612

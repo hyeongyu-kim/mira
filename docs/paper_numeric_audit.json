@@ -949,7 +949,7 @@
   "table27_per_seed_cells": 48,
   "all_supported_numeric_cells_match": true,
   "scope": "TENT/MIRA and released CNN controls only; no exact historical ViT Table3 reproduction claim",
-  "historical_viT": "Original 42.03/45.17 config not recovered; current batch64 seed1 is a separate selected release reference.",
+  "historical_viT": "Photo recovered LR0.00025/batch64; selected torchvision seed1 reconstruction measures 41.64/44.76 versus historical Table3 42.03/45.17. Exact original checkpoint/seed/full-stream provenance remains unconfirmed.",
   "per_seed_tables": [
     27
   ],

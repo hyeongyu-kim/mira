@@ -53,6 +53,10 @@ def main():
                 config = json.loads((ROOT / profile['configs'][method][row['seed']]).read_text())
                 assert row['run_id'] == config['run_id']
                 assert int(row['batch_size']) == config['batch_size']
+                assert row['backbone'] == config['backbone']
+                assert float(row['lr']) == config['lr']
+                assert row['protocol'] == config['protocol']
+                assert row['checkpoint_sha256'] == config['checkpoint_sha256']
                 assert row['domains_completed'] == '15'
                 printed_metrics = profile.get('reported_seed_metrics', {}).get(row['seed'], {}).get(method, {})
                 for metric, printed in printed_metrics.items():
@@ -63,6 +67,10 @@ def main():
         for path in paths:
             assert (ROOT / path).is_file(), (table, path)
     assert commands['3 ViT'] == [], 'Historical Table 3 has no verified exact reproduction profile.'
+    for entry in json.loads((ROOT/'results/diagnostics/index.json').read_text()):
+        archive = ROOT/entry['archive']
+        assert archive.is_file(), 'Missing diagnostics archive: '+entry['archive']
+        assert hashlib.sha256(archive.read_bytes()).hexdigest() == entry['sha256']
     raw = read_csv(ROOT / 'results/seed_results.csv')
     summaries = read_csv(ROOT / 'results/mean_sd_summary.csv')
     keys = list(summaries[0])[:list(summaries[0]).index('n_seeds')]

@@ -430,6 +430,13 @@
       "bytes": 346292833,
       "architecture": "vit_base_patch16_224.orig_in21k_ft_in1k",
       "official_url": "https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vitjx/jx_vit_base_p16_224-80ecf9dd.pth"
+    },
+    {
+      "file": "vit_b_16-c867db91.pth",
+      "sha256": "c867db91d3e12c6cbadabb610d73c24a546bf82d8c03a9fea34f43a712ddb0e9",
+      "bytes": 346328529,
+      "architecture": "vit_b_16",
+      "official_url": "https://download.pytorch.org/models/vit_b_16-c867db91.pth"
     }
   ],
   "note": "Original scientific runtime preserved byte-for-byte; public entrypoints remove host paths and GPU UUID restrictions. Frozen source commit is provenance, not sufficient alone to identify modified code.",
@@ -443,7 +450,7 @@
   "api_and_entrypoint_files": [
     {
       "path": "configs/vit_profiles.json",
-      "sha256": "546c5fec66acc8a481ffdb34df1547063289f8d8e26a492b4e17f0b0e0f5deba"
+      "sha256": "7780bda0085948c7df74fc155a67db33b136948da88ae0772c67b7ba2f8dde10"
     },
     {
       "path": "mira/__init__.py",
@@ -483,7 +490,7 @@
     },
     {
       "path": "scripts/check_assets.py",
-      "sha256": "98ea42b68c4d753a82242193027cff83587e723c0181df2c93fa0f11a2670bd3"
+      "sha256": "2f043ebd59d5e3ad22ee0c5c3b188fb19cc4d27ca4cbee1f974e228c9f66c04a"
     },
     {
       "path": "scripts/check_environment.py",
@@ -507,7 +514,7 @@
     },
     {
       "path": "scripts/run_vit.py",
-      "sha256": "a69aaff9b44368d60b1936edc02c746bbe412af9486dc46b80ba936cf5d81b86"
+      "sha256": "05964c2c5b88fb3fadcbf36feb80ac49bbc40200259f48ccda54c1d2aaee07d3"
     },
     {
       "path": "scripts/run_vit.sh",
@@ -523,11 +530,11 @@
     },
     {
       "path": "scripts/validate_release.py",
-      "sha256": "0992ade09f4a6404c20c2c756b395b9e31f0b63d53ef668e01c8708f64e55fd1"
+      "sha256": "f424083a96b9b4c5136c71c7afe5aad566c91544a5f346b5b45bfa3236e35ae0"
     }
   ],
-  "release_revision": "batch64_v1",
-  "scientific_change_note": "Core, optimizer and CNN profiles preserved; ViT default changed to author-selected batch64 reference. Stream metadata adds portable IDs without changing order.",
+  "release_revision": "torchvision_vit_batch64_v2_20261013",
+  "scientific_change_note": "Selected measured torchvision ViT-B/16 LR0.00025/batch64 reference; previous timm profiles retained separately. Frozen scientific core unchanged.",
   "config_files": [
     {
       "path": "configs/ablations/alpha_rho/c100_ar_a0.01_r0.85_s1.json",
@@ -1422,28 +1429,53 @@
       "sha256": "5908a53edf047fffbcfd108fb0208ff2a0b1ad154bf6af6b6c152e5476f98281"
     },
     {
-      "path": "configs/vit_b16_full_s1.json",
+      "path": "configs/vit/timm_batch64_v1/vit_b16_full_s1.json",
       "sha256": "818c6b3376e4c98f64b4538d227f67be523fd98b359f83189626341c28d3cc95"
     },
     {
-      "path": "configs/vit_b16_full_s2.json",
+      "path": "configs/vit/timm_batch64_v1/vit_b16_full_s2.json",
       "sha256": "73b859db0419ebb4459aa779cf7c99cd4ef4cbc0853e70d766df6efde6ae1378"
     },
     {
-      "path": "configs/vit_b16_full_s3.json",
+      "path": "configs/vit/timm_batch64_v1/vit_b16_full_s3.json",
       "sha256": "10a841c0b9234832dab885506d6397bfa3055642a467804e84ebd471070ceeac"
     },
     {
-      "path": "configs/vit_b16_tent_s1.json",
+      "path": "configs/vit/timm_batch64_v1/vit_b16_tent_s1.json",
       "sha256": "ef8a1044e338d122b9a0ad44ce7db85f05c849631c72d22a052030f25a8df9fc"
     },
     {
-      "path": "configs/vit_b16_tent_s2.json",
+      "path": "configs/vit/timm_batch64_v1/vit_b16_tent_s2.json",
       "sha256": "2603bc5e3f59259ef0a53da721790e2adf5294a1e257dbb331d3a67cb2afc818"
     },
     {
-      "path": "configs/vit_b16_tent_s3.json",
+      "path": "configs/vit/timm_batch64_v1/vit_b16_tent_s3.json",
       "sha256": "651aa7406345906946e8cb1f22759cb6647a80b3d93dca9e2d0353babb2ab388"
+    },
+    {
+      "path": "configs/vit_b16_full_s1.json",
+      "sha256": "048ae0108d123a5d1762dfb5df928e9b1b2dbf6be0ca33090956610a79aaf167"
+    },
+    {
+      "path": "configs/vit_b16_full_s2.json",
+      "sha256": "5cd88aa87cf0aa932e335fcd359416eb0c1db8c6f64fd466655d17d5480de9d1"
+    },
+    {
+      "path": "configs/vit_b16_full_s3.json",
+      "sha256": "0ef848c2dd1cecd0818432f44f9e782c16b7128aed09ca6645b5b99900037bd0"
+    },
+    {
+      "path": "configs/vit_b16_tent_s1.json",
+      "sha256": "1483167a283b3b507c0d0cec7dbfffc5d5130aa41695fd0b619edd986bda40ac"
+    },
+    {
+      "path": "configs/vit_b16_tent_s2.json",
+      "sha256": "4944830f4b05998225a164c1b9f860af7b45a5c24e2dd8d5422b200b78ec0a45"
+    },
+    {
+      "path": "configs/vit_b16_tent_s3.json",
+      "sha256": "942ff6c2e56619262ca5c724a0d2e62292b77f1b375f39e9a14140cc4c9cb7b3"
     }
-  ]
+  ],
+  "selected_vit_profile": "vit_b16_torchvision_batch64_v2"
 }

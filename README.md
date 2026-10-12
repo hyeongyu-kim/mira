@@ -41,7 +41,7 @@ replace them automatically.
 |---|---:|---:|---|
 | CIFAR-100-C / ResNeXt AugMix | 64 | 0.001 | 1, 2, 3 |
 | ImageNet-C / ResNet-50 V1 | 64 | 0.00025 | 1, 2, 3 |
-| ImageNet-C / timm ViT-B/16 orig_in21k_ft_in1k | 64 | 0.001 | 1 |
+| ImageNet-C / torchvision ViT-B/16 V1 | 64 | 0.00025 | 1 |
 
 All three use severity 5, 15 corruptions, 10,000 examples per corruption, one adaptation
 step per batch, and model/optimizer reset at every corruption boundary. Metrics use
@@ -66,12 +66,13 @@ corruption boundaries. Configs, source/checkpoint hashes, parameter lists, per-c
 metrics, and batch sigma/MI/agreement/fallback diagnostics are saved alongside the results.
 
 The ViT default is versioned in [vit_profiles.json](code/configs/vit_profiles.json).
-Additional repeats and the previous batch-128 validation are explicit choices:
+Additional repeats and previous timm validations are explicit choices:
 
 ```bash
 bash scripts/run_vit.sh --list-profiles
 bash scripts/run_vit.sh --dry-run
 bash scripts/run_vit.sh --seeds 1 2 3
+bash scripts/run_vit.sh --profile vit_b16_batch64_v1
 bash scripts/run_vit.sh --profile vit_b16_batch128_previous
 ```
 
@@ -101,18 +102,20 @@ Fresh release checks are reported separately in [Reproducibility](docs/REPRODUCI
 | ImageNet-C / ResNet-50 V1 | TENT | 36.62 ± 0.12 | 0.4089 | 0.0478 | 3.2549 |
 | ImageNet-C / ResNet-50 V1 | TENT+MIRA | 39.45 ± 0.14 | 0.4053 | 0.0361 | 3.0205 |
 
-The selected **ViT batch-64 release reference** is a separate, newly measured seed-1 comparison:
+The selected **torchvision ViT-B/16 reference** uses LR 0.00025 / batch 64, with one measured seed:
 
 | Method | Accuracy (%) | MMC | ECE | NLL |
 |---|---:|---:|---:|---:|
-| TENT | 45.96 | 0.7330 | 0.2736 | 4.0038 |
-| TENT+MIRA | 50.02 | 0.6393 | 0.1410 | 2.9037 |
+| TENT | 41.64 | 0.5170 | 0.1167 | 3.0582 |
+| TENT+MIRA | 44.76 | 0.4908 | 0.0549 | 2.8406 |
 
-These ViT values are not the historical 42.03/45.17% paper Table 3 rows, whose original
-complete run provenance remains unresolved. This is a single-seed result; no SD is inferred.
-MIRA improves mean accuracy, ECE and NLL here, but the per-corruption results include an
-accuracy decrease of 17.77 percentage points on impulse noise. Full results and paired
-corruption differences are included in [code/results](code/results/).
+Paper Table 3 reports 42.03/45.17%. The new accuracies are 0.39/0.41 percentage points
+lower; the gain is +3.12 points versus the paper's +3.14. Original checkpoint/seed/stream
+provenance remains unconfirmed, so this is labeled a separate reconstruction with no seed SD.
+Mean accuracy, ECE and NLL improve. Frost accuracy decreases by 2.66 points and brightness
+ECE increases. No-feasible/fallback frequency is 99.62%; this result does not establish
+jointly feasible scale selection on every batch. Full metrics and paired differences are
+included in [code/results](code/results/). Previous timm references have separate profiles and archives.
 
 <!-- Result figures reserved. Add the final plots here when ready. -->
 
@@ -123,17 +126,18 @@ from mira import MIRA, MIRAConfig
 from mira.checkpoints import load_source_classifier
 
 model, _ = load_source_classifier(
-    "vit_base_patch16_224.orig_in21k_ft_in1k",
-    "/path/to/jx_vit_base_p16_224-80ecf9dd.pth",
+    "vit_b_16",
+    "/path/to/vit_b_16-c867db91.pth",
 )
-adapter = MIRA(model.cuda(), MIRAConfig(lr=1e-3))
-probabilities = adapter.predict_proba(images.cuda())  # unlabeled, normalized batch
+adapter = MIRA(model.cuda(), MIRAConfig(lr=2.5e-4))
+probabilities = adapter.predict_proba(images.cuda())  # unlabeled RGB batch in [0, 1]
 adapter.reset()                                    # next corruption boundary
 ```
 
 CNNs adapt normalization affine parameters. ViT adapts only LayerNorm weight and bias
 (50 tensors / 38,400 parameters); other source weights remain fixed. Use the source model's
-input normalization; this ViT uses mean/std (0.5, 0.5, 0.5).
+input normalization; the loader includes this ViT's mean (0.485, 0.456, 0.406) and
+std (0.229, 0.224, 0.225). ImageNet-C tensors are already 224×224.
 
 Defaults: α=0.03, ρ=0.90, τ=0.25, γ=1, K=300 and the original 16-radius grid, with
 feature-wise He-in scaling. Gaussian draws are shared across candidate radii. Reliability
@@ -160,4 +164,4 @@ root of `main`. README figure slots are reserved for final assets.
 
 Configurations for the main CNN/ViT recipes live directly under `code/configs/`;
 other controls are grouped by study in `code/configs/ablations/`. Large detailed logs
-are packaged as four archives, with browsable seed/summary CSVs retained in `code/results/`.
+are packaged by study, with browsable seed/summary CSVs retained in `code/results/`.

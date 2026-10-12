@@ -53,7 +53,7 @@ def main():
     for var in ['MIRA_DATA_ROOT', 'MIRA_CHECKPOINT_ROOT', 'CUDA_VISIBLE_DEVICES']:
         if not os.environ.get(var):
             ap.error(f'Set {var} before evaluation.')
-    subprocess.run([sys.executable, str(ROOT / 'scripts/check_assets.py'), '--scope', 'vit', '--check-data'], check=True)
+    subprocess.run([sys.executable, str(ROOT / 'scripts/check_assets.py'), '--scope', 'vit', '--vit-profile', name, '--check-data'], check=True)
     for command in commands:
         subprocess.run(command, check=True)
 

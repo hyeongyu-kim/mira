@@ -155,7 +155,9 @@
       "original_export_compressed_sha256": "1ba12f19edd4797897239d34804353e0b3026c501d8ea6a849a47947ae9d25ed",
       "compressed_sha256": "ae5dbe70071e66bdf2323b2b07fc9d205f17a24046a0557b1a14470dff97ff00",
       "before_bytes": 18928019,
-      "after_bytes": 3299121
+      "after_bytes": 3299121,
+      "archive": "results/diagnostics/vit_timm_batch64_v1.tar.gz",
+      "profile": "vit_b16_batch64_v1"
     },
     {
       "path": "vit_validation/vit_b16_bs64_tent_s1/batch_diagnostics.jsonl.gz",
@@ -164,7 +166,25 @@
       "original_export_compressed_sha256": "438ead19a65dec2a6070ce9d02b81532fe5ef62ed3a053fa641433d54929706e",
       "compressed_sha256": "2cb31423d8ca16723a974dd48e8e988e78c2efaa83595b048d12e62006e340a3",
       "before_bytes": 40708,
-      "after_bytes": 40468
+      "after_bytes": 40468,
+      "archive": "results/diagnostics/vit_timm_batch64_v1.tar.gz",
+      "profile": "vit_b16_batch64_v1"
+    },
+    {
+      "path": "vit_torchvision_batch64_v2/vit_recovery_torchvision_lr00025_bs64_tent_s1/batch_diagnostics.jsonl.gz",
+      "rows": 2355,
+      "excluded_vector_rows": 0,
+      "original_jsonl_concatenated_sha256": "a17b2aeac04a816ef2038aaac470001d87e9a40ced9a5732064e4afa47c1fd36",
+      "compressed_sha256": "0c7a2b535daeea4bf1827759a76ff1e5164fa38399f9d46a7fb47c4d8e15a79c",
+      "archive": "results/diagnostics/vit_torchvision_batch64_v2.tar.gz"
+    },
+    {
+      "path": "vit_torchvision_batch64_v2/vit_recovery_torchvision_lr00025_bs64_full_s1/batch_diagnostics.jsonl.gz",
+      "rows": 2355,
+      "excluded_vector_rows": 2355,
+      "original_jsonl_concatenated_sha256": "f838f7323d640029f5ad99878e80aed5dd6eae20e7bd6d3cfbecb2198fee6394",
+      "compressed_sha256": "fb87ec185b2b55dcc6358005386dfb9ad7fd8be2a3d9920d28749f58f6771077",
+      "archive": "results/diagnostics/vit_torchvision_batch64_v2.tar.gz"
     }
   ]
 }

@@ -1,0 +1,2 @@
+checkpoint_candidate,run_id,n_batches,sigma_mean,sigma_batch_sample_sd,sigma_min,sigma_max,p05,p25,p50,p75,p95,no_feasible_ratio,fallback_ratio,lower_boundary_ratio,upper_boundary_ratio,interpolation_ratio,gradient_norm_min,gradient_norm_median,gradient_norm_max
+torchvision,vit_recovery_torchvision_lr00025_bs64_full_s1,2355,0.9738237826687515,0.110764118266181,0.30000001192092896,1.0,0.5,1.0,1.0,1.0,1.0,0.9961783439490446,0.9961783439490446,0.0,0.0,0.003821656050955414,1.433674693107605,4.071418285369873,41.04874801635742

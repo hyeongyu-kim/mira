@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "selected_profile": "vit_b16_torchvision_batch64_v2",
+  "measured_seeds": [
+    1
+  ],
+  "full_runs": 2,
+  "samples_per_run": 150000,
+  "batches_per_run": 2355,
+  "matched_pair_corruptions": 15,
+  "actual_execution_commit": "7143945dbc1124bf69b8784a4f4fb3dff29f0a78",
+  "checks": [
+    {
+      "run_id": "vit_recovery_torchvision_lr00025_bs64_tent_s1",
+      "checkpoint_candidate": "torchvision",
+      "method": "tent",
+      "samples": 150000,
+      "batches": 2355,
+      "checks": {
+        "classifier_unchanged": true,
+        "sample_weights_detached": true,
+        "finite_gradients": true,
+        "source_reset_verified": true
+      },
+      "paired_batch_layout": "156 x 64 + 1 x 16 per corruption",
+      "public_repository_commit": "7143945dbc1124bf69b8784a4f4fb3dff29f0a78",
+      "scientific_snapshot_commit": "8b2ed63255d906b6b0afaefc6ae630b9ec4bdaa1",
+      "worker_sha256": "b640f4db8eeadce2c874ca966981bdff2feda1024af895ab8944691e12543851",
+      "checkpoint_sha256": "c867db91d3e12c6cbadabb610d73c24a546bf82d8c03a9fea34f43a712ddb0e9",
+      "parameter_count": 38400,
+      "parameter_tensors": 50,
+      "normalization": [
+        {
+          "name": "normalize",
+          "mean": [
+            0.48500001430511475,
+            0.4560000002384186,
+            0.4059999883174896
+          ],
+          "std": [
+            0.2290000021457672,
+            0.2240000069141388,
+            0.22499999403953552
+          ]
+        }
+      ],
+      "gradient_normalization_applied": false
+    },
+    {
+      "run_id": "vit_recovery_torchvision_lr00025_bs64_full_s1",
+      "checkpoint_candidate": "torchvision",
+      "method": "full",
+      "samples": 150000,
+      "batches": 2355,
+      "checks": {
+        "classifier_unchanged": true,
+        "sample_weights_detached": true,
+        "finite_gradients": true,
+        "source_reset_verified": true
+      },
+      "paired_batch_layout": "156 x 64 + 1 x 16 per corruption",
+      "public_repository_commit": "7143945dbc1124bf69b8784a4f4fb3dff29f0a78",
+      "scientific_snapshot_commit": "8b2ed63255d906b6b0afaefc6ae630b9ec4bdaa1",
+      "worker_sha256": "b640f4db8eeadce2c874ca966981bdff2feda1024af895ab8944691e12543851",
+      "checkpoint_sha256": "c867db91d3e12c6cbadabb610d73c24a546bf82d8c03a9fea34f43a712ddb0e9",
+      "parameter_count": 38400,
+      "parameter_tensors": 50,
+      "normalization": [
+        {
+          "name": "normalize",
+          "mean": [
+            0.48500001430511475,
+            0.4560000002384186,
+            0.4059999883174896
+          ],
+          "std": [
+            0.2290000021457672,
+            0.2240000069141388,
+            0.22499999403953552
+          ]
+        }
+      ],
+      "gradient_normalization_applied": false
+    }
+  ],
+  "exact_historical_table3_reproduction": false,
+  "fallback_ratio": 0.9961783439490446
+}

@@ -1,7 +1,8 @@
 # Reproducibility coverage
 
-The code release supports **TENT/MIRA on CNNs and timm ViT-B/16**, including their explicit
-CNN controls. The selected ViT reference is batch64 seed1. Scope, archived evidence and
+The code release supports **TENT/MIRA on CNNs and ViT-B/16**, including their explicit
+CNN controls. The selected ViT reference is torchvision, LR0.00025 / batch64 / seed1.
+Previous timm profiles retain separate configs and evidence. Scope, archived evidence and
 fresh execution are recorded separately; the release does not claim every experiment in the
 paper has been freshly rerun.
 
@@ -54,21 +55,29 @@ Fresh paired results retain accuracy/ECE/NLL improvements in the two main CNN co
 See `release_validation_vs_archived.csv` for all four metric differences; no claim of
 statistical significance is inferred from three repeats.
 
-The selected ViT measurements are 45.96/.7330/.2736/4.0038 for TENT and
-50.02/.6393/.1410/2.9037 for TENT+MIRA (Accuracy %, MMC, ECE, NLL). Seeds2/3 are
-prepared but unmeasured; SD fields are blank. The previously measured batch128 profile is
-archived separately. Historical Table3's 42.03/45.17 rows still lack original complete
-checkpoint/config/log provenance and are not advertised as reproduced by the new profile.
+The selected torchvision ViT measurements are 41.64/.5170/.1167/3.0582 for TENT and
+44.76/.4908/.0549/2.8406 for TENT+MIRA (Accuracy %, MMC, ECE, NLL). Seeds2/3 are
+prepared but unmeasured; SD fields are blank. Full execution used GPU0 and preparation commit
+`7143945dbc1124bf69b8784a4f4fb3dff29f0a78`; the worker and frozen core are unchanged.
+The recovered LR/batch agree with historical notes, but original checkpoint/seed/stream
+provenance remains unconfirmed. Table3 reports 42.03/45.17: differences are −.3927/−.4127 pp,
+while the gain +3.12 pp is close to +3.14 pp. Exact original reproduction is not claimed.
+Fallback frequency is 99.62%; improved mean metrics do not prove universal joint feasibility.
+Previous timm batch64 and batch128 results are archived as separate versioned protocols.
 
 ## Implementation checks
 
-15 CPU tests pass, covering scientific objective equivalence, shared Gaussian probing,
+22 CPU tests pass, covering scientific objective equivalence, independent paper equations, shared Gaussian probing,
 classifier restoration, detached sample weights, exact model/optimizer reset, actual global
-adaptation-gradient norm matching, timm CLS-token caching, LayerNorm-only ViT adaptation,
+adaptation-gradient norm matching, timm/torchvision classifier-input caching, LayerNorm-only ViT adaptation,
 and safe switching between versioned profiles without reusing old result IDs.
-Six GPU smoke checks test the packaged ResNeXt, ResNet-50 and ViT paths for TENT/MIRA.
-The current ViT smoke metrics exactly match the pre-layout batch64 runtime within 1e−6.
-A prior actual-weight ViT standalone-API check also matches reference outputs and updated
+Six earlier GPU smokes cover ResNeXt, ResNet-50 and the preserved timm ViT paths.
+Two new torchvision TENT/MIRA smokes use the default public command and match all four
+original two-batch metrics within 1e−6; they are explicitly excluded from benchmark rows.
+See [selected-profile validation](../code/docs/validation_checks/torchvision_profile_validation.json)
+and [full-run evidence](../code/docs/validation_checks/torchvision_vit_full_validation.json),
+with [CPU test output](../code/docs/validation_checks/torchvision_cpu_tests.txt).
+A prior actual-weight timm ViT standalone-API check also matches reference outputs and updated
 state tensors exactly, with unchanged classifier and exact reset.
 
 The MIRA scientific core is byte-identical to the frozen experimental snapshot:
@@ -95,14 +104,17 @@ The clean-clone validation passed on commit
 `cab51ed5c54b8ceb7ea60c39b084f8b0854f585b`: an isolated editable install, all source/config
 hashes and assets, 15 CPU tests, and two final-worker ViT GPU smokes. Both smokes match
 all four original batch64 smoke metrics within 1e−6 and correctly record that public commit
-with a clean worktree. The follow-up commits add or clarify validation records, table mapping and documentation;
-their scientific source/config hashes are identical. The conda environment was inherited
+with a clean worktree. That clone check covers the preserved timm profile and common runtime.
+The subsequent torchvision promotion changes the default configs and evidence while retaining
+the same frozen scientific files; new default-command GPU smokes validate its portable paths.
+The conda environment was inherited
 from the measured reference packages for this installation check; a from-scratch conda
 network installation was not performed. See
 [clone_validation.json](../code/docs/validation_checks/clone_validation.json).
 
 The checked conda/Python versions and JPEG decoder match the reference environment.
-CUDA evaluation used NVIDIA RTX A6000 physical GPUs2/3. Runtime depends on host load
+CNN/timm checks used NVIDIA RTX A6000 physical GPUs2/3; the selected torchvision pair used GPU0.
+Runtime depends on host load
 and allocator warm-up; Table16's archived cost records are not promised as identical fresh
 timings. CUDA allocated and reserved peaks remain separate. The conda lock preserves the
 reference JPEG backend, which can differ from a pip Pillow wheel despite the same version.

@@ -33,10 +33,12 @@ No target labels enter sigma selection, reliability weights or adaptation.
 Performance benefits and gating advantages remain protocol dependent, as documented in
 [results](RESULTS.md); semantic alignment is not a universal-improvement claim.
 
-The image supplied for historical ViT recovery identifies ImageNet-C, learning rate 0.00025
-and batch size 64. It does not identify the source checkpoint, architecture library, seed or
-complete preprocessing/stream. That configuration is evaluated separately after the current
-batch64/LR0.001 release is published; the selected release reference is not silently replaced.
+Recovered ViT settings identify ImageNet-C, learning rate 0.00025 and batch size 64,
+but not source checkpoint, architecture library, seed or complete preprocessing/stream.
+The selected release reference is the measured torchvision reconstruction (41.64/44.76%).
+Previous timm references have separate versioned configs and archives. All three profiles
+retain their source/checkpoint/protocol identities; exact historical Table3 reproduction is unconfirmed.
 
-19 CPU tests pass, including four independent paper-equation checks. Grouping configs and
+22 CPU tests pass, including four independent paper-equation checks and both transformer
+implementations' feature capture, norm-only updates, classifier preservation and reset. Grouping configs and
 archiving diagnostics leaves the frozen scientific core unchanged.
