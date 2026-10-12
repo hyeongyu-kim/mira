@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "default_profile": "vit_b16_batch64_v1",
+  "profiles": {
+    "vit_b16_batch64_v1": {
+      "description": "Current release reference, batch64; seed1 measured",
+      "default_seeds": [
+        1
+      ],
+      "available_seeds": [
+        1,
+        2,
+        3
+      ],
+      "configs": {
+        "tent": {
+          "1": "configs/vit_b16_tent_s1.json",
+          "2": "configs/vit_b16_tent_s2.json",
+          "3": "configs/vit_b16_tent_s3.json"
+        },
+        "full": {
+          "1": "configs/vit_b16_full_s1.json",
+          "2": "configs/vit_b16_full_s2.json",
+          "3": "configs/vit_b16_full_s3.json"
+        }
+      },
+      "reference_results": "results/vit_seed_results.csv",
+      "reported_seed_metrics": {
+        "1": {
+          "tent": {
+            "accuracy_percent": "45.96",
+            "mmc": "0.7330",
+            "ece": "0.2736",
+            "nll": "4.0038"
+          },
+          "full": {
+            "accuracy_percent": "50.02",
+            "mmc": "0.6393",
+            "ece": "0.1410",
+            "nll": "2.9037"
+          }
+        }
+      }
+    },
+    "vit_b16_batch128_previous": {
+      "description": "Previous validation, batch128; separate three-seed results",
+      "default_seeds": [
+        1,
+        2,
+        3
+      ],
+      "available_seeds": [
+        1,
+        2,
+        3
+      ],
+      "configs": {
+        "tent": {
+          "1": "configs/vit/batch128_previous/vit_b16_tent_s1.json",
+          "2": "configs/vit/batch128_previous/vit_b16_tent_s2.json",
+          "3": "configs/vit/batch128_previous/vit_b16_tent_s3.json"
+        },
+        "full": {
+          "1": "configs/vit/batch128_previous/vit_b16_full_s1.json",
+          "2": "configs/vit/batch128_previous/vit_b16_full_s2.json",
+          "3": "configs/vit/batch128_previous/vit_b16_full_s3.json"
+        }
+      },
+      "reference_results": "results/archive/vit_batch128/vit_seed_results.csv"
+    }
+  }
+}

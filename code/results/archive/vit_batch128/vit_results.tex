@@ -1,0 +1,10 @@
+\begin{tabular}{lcccc}
+\toprule
+Method & Accuracy (\%) $\uparrow$ & MMC & ECE $\downarrow$ & NLL $\downarrow$ \\
+\midrule
+TENT & $48.53 \pm 1.04$ & $0.6672 \pm 0.0037$ & $0.1821 \pm 0.0141$ & $2.8959 \pm 0.1926$ \\
+TENT+MIRA & $48.96 \pm 2.31$ & $0.6034 \pm 0.0170$ & $0.1164 \pm 0.0396$ & $2.8096 \pm 0.3821$ \\
+\bottomrule
+\end{tabular}
+% Fresh validation, seeds 1/2/3; sample SD ddof=1. Accuracy SD is in pp.
+% ViT-B/16 orig_in21k_ft_in1k; severity5, 15 corruptions, 10k each, bs128, SGD1e-3.

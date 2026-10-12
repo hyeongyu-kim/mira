@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mira-tta"
+version = "0.1.0"
+description = "Mutual information guided calibration for reliable test-time adaptation"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.2,<3", "numpy>=1.26,<2"]
+
+[project.urls]
+Repository = "https://github.com/hyeongyu-kim/mira"
+Project = "https://hyeongyu-kim.github.io/mira/"
+Paper = "https://openreview.net/forum?id=ujUYtJK5LG"
+
+[project.optional-dependencies]
+vit = ["timm==1.0.15", "torchvision==0.17.1"]
+
+[tool.setuptools.packages.find]
+include = ["mira*"]

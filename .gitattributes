@@ -1,0 +1,8 @@
+# Preserve the recorded byte hashes, including reference files originally saved with CRLF.
+code/** -text
+code/reference_runtime/** linguist-vendored=true
+code/results/** linguist-generated=true
+LICENSE -text
+README.md text eol=lf
+docs/** text eol=lf
+CITATION.cff text eol=lf

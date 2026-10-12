@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "Please cite the MIRA paper if you use this code."
+type: software
+title: "MIRA: Mutual Information guided calibration for Reliable Test-Time Adaptation"
+version: 0.1.0
+repository-code: "https://github.com/hyeongyu-kim/mira"
+url: "https://hyeongyu-kim.github.io/mira/"
+license: MIT
+authors:
+  - family-names: Kim
+    given-names: Hyeongyu
+  - family-names: Jang
+    given-names: Mingyeong
+  - family-names: Song
+    given-names: Youngjun
+  - family-names: Han
+    given-names: GeonHui
+  - family-names: Hwang
+    given-names: Dosik
+preferred-citation:
+  type: conference-paper
+  title: "MIRA: Mutual Information guided calibration for Reliable Test-Time Adaptation"
+  authors:
+    - family-names: Kim
+      given-names: Hyeongyu
+    - family-names: Jang
+      given-names: Mingyeong
+    - family-names: Song
+      given-names: Youngjun
+    - family-names: Han
+      given-names: GeonHui
+    - family-names: Hwang
+      given-names: Dosik
+  year: 2026
+  collection-title: Advances in Neural Information Processing Systems
+  url: "https://openreview.net/forum?id=ujUYtJK5LG"

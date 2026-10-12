@@ -1,0 +1,54 @@
+{
+  "code_commit": "8b2ed63255d906b6b0afaefc6ae630b9ec4bdaa1",
+  "manifest_sha256": "77024dfeaf5c60cd076cdeb57dc0507f1205e055789ec9dec96bea7c409a8bfc",
+  "python": "python",
+  "worker_sha256": "1fa93cac455de871c4e577d271146e2d427e7996d886102c329fceecff4417f4",
+  "torch": "2.2.1",
+  "cuda": "12.1",
+  "cudnn": 8902,
+  "gpu_name": "NVIDIA RTX A6000",
+  "gpu_uuid": "2",
+  "stream_rng": {
+    "python": 1,
+    "numpy": 1,
+    "selection": "historical random.shuffle then random.sample"
+  },
+  "perturbation_rng": {
+    "torch_cuda": 1,
+    "shared_across_candidate_sigmas": true,
+    "across_runs": "same CUDA seed and draw shape for compared MIRA methods"
+  },
+  "cpu_torch_rng": 1,
+  "evaluation": "pre-update prediction; macro-average over 15 corruption metrics; severity5; ECE10 equal-width bins",
+  "checkpoint": "${MIRA_CHECKPOINT_ROOT}/resnet34-b627a593.pth",
+  "parameter_count": 17024,
+  "checkpoints": [
+    {
+      "file": "cifar100/corruptions/Hendrycks2020AugMix_ResNeXt.pt",
+      "sha256": "ce86bde2485fbc74ae90186bcb73d294af6c6fe587205b700eb1b4a20e783d78",
+      "bytes": 27737682
+    },
+    {
+      "file": "cifar100/corruptions/Hendrycks2020AugMix_WRN.pt",
+      "sha256": "8747cfde9934180a8b9cca10c7567660dbe3e3f731304bda59f84fdfb6fb5a9d",
+      "bytes": 9085677
+    },
+    {
+      "file": "cifar10/corruptions/Hendrycks2020AugMix_WRN.pt",
+      "sha256": "a39f020c48b3bad58df794b5d3a286724f00b9f026ee22d0e6d1710748599e82",
+      "bytes": 9039237
+    },
+    {
+      "file": "resnet50-0676ba61.pth",
+      "sha256": "0676ba61b6795bbe1773cffd859882e5e297624d384b6993f7c9e683e722fb8a",
+      "bytes": 102530333
+    },
+    {
+      "file": "resnet34-b627a593.pth",
+      "sha256": "b627a593bcbe140c234610266fe4f8ae95ea42fc881d091c9b6052e6b1d0590f",
+      "bytes": 87319819
+    }
+  ],
+  "export_note": "Actual measured worker hash retained. Final packaging changes record integrity/provenance metadata, not scientific core/update behavior.",
+  "original_file_sha256": "043eb8c2c6c15beddf9a35fb0d5d2a89923c72ef236bdf2d6b12f8db22009ef8"
+}

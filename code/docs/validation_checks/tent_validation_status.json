@@ -1,0 +1,64 @@
+[
+  {
+    "run_id": "release_candidate_c100_tent_s1__smoke",
+    "status": "passed",
+    "kind": "smoke",
+    "physical_gpu": 2,
+    "checks": {
+      "classifier_unchanged": true,
+      "sample_weights_detached": true,
+      "finite_gradients": true,
+      "source_reset_verified": true
+    }
+  },
+  {
+    "run_id": "release_candidate_in50_tent_s1__smoke",
+    "status": "passed",
+    "kind": "smoke",
+    "physical_gpu": 2,
+    "checks": {
+      "classifier_unchanged": true,
+      "sample_weights_detached": true,
+      "finite_gradients": true,
+      "source_reset_verified": true
+    }
+  },
+  {
+    "run_id": "release_candidate_vit_b16_tent_s1__smoke",
+    "status": "passed",
+    "kind": "smoke",
+    "physical_gpu": 2,
+    "checks": {
+      "classifier_unchanged": true,
+      "sample_weights_detached": true,
+      "finite_gradients": true,
+      "source_reset_verified": true
+    }
+  },
+  {
+    "run_id": "release_candidate_in50_tent_s2",
+    "status": "passed",
+    "kind": "full",
+    "physical_gpu": 2,
+    "seconds": 305.0517144203186,
+    "metrics": {
+      "accuracy_percent": 36.498667200406395,
+      "mmc": 0.40735108653704327,
+      "ece": 0.04970116911184353,
+      "nll": 3.263359220822652
+    }
+  },
+  {
+    "run_id": "release_candidate_in50_tent_s3",
+    "status": "passed",
+    "kind": "full",
+    "physical_gpu": 2,
+    "seconds": 533.1890733242035,
+    "metrics": {
+      "accuracy_percent": 36.67133311430613,
+      "mmc": 0.4090669413407644,
+      "ece": 0.046833611942777985,
+      "nll": 3.2520344654719033
+    }
+  }
+]

@@ -1,0 +1,3 @@
+method,n_seeds,seeds,batch_size,protocol,sd_definition,accuracy_percent_mean,accuracy_percent_sd,mmc_mean,mmc_sd,ece_mean,ece_sd,nll_mean,nll_sd
+TENT,1,1,64,ImageNetC_timm_ViTB16_orig_in21k_ft_in1k_reset_sgd_lr0.001_bs64,sample SD ddof=1; accuracy SD in pp; blank for single run,45.955333560705185,,0.7329940756162008,,0.2735949196074216,,4.003813656171163,
+TENT+MIRA,1,1,64,ImageNetC_timm_ViTB16_orig_in21k_ft_in1k_reset_sgd_lr0.001_bs64,sample SD ddof=1; accuracy SD in pp; blank for single run,50.01666635274887,,0.6392824451128641,,0.1409560896990418,,2.903664962450663,

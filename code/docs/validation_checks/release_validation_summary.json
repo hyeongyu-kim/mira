@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "fresh_cnn_complete_runs": 13,
+  "fresh_cnn_total_examples": 1950000,
+  "cifar100_main_seeds": [
+    1,
+    2,
+    3
+  ],
+  "imagenet50_main_seeds": [
+    1,
+    2,
+    3
+  ],
+  "resnet34_representative_seeds": [
+    1
+  ],
+  "matched_pair_corruptions": 90,
+  "implementation_checks_all_passed": true,
+  "accuracy_max_abs_delta_pp": 0.02600044012069702,
+  "source_core_sha256": "914e51046485bbf177ae96a78911766ed53054b4e328eb44f6801afc253b21b7",
+  "separate_current_vit_complete_runs": 2,
+  "current_vit_measured_seeds": [
+    1
+  ],
+  "archived_cnn_runs": 217,
+  "archived_cnn_runs_rerun_in_full": false
+}

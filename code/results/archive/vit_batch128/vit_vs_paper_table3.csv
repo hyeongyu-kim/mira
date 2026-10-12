@@ -1,0 +1,7 @@
+paper,table,pdf_page,method,metric,historical_single_run,fresh_three_seed_mean,fresh_sample_sd,difference_fresh_mean_minus_historical,historical_provenance
+NeurIPS_2026_MIRA_camera_ready_v1.pdf,3,9,TENT,accuracy_percent,42.03,48.53088878922993,1.0425019315357766,6.500888789229926,original full run config/log unresolved; not an exact protocol match claim
+NeurIPS_2026_MIRA_camera_ready_v1.pdf,3,9,TENT,ece,0.1141,0.18212121154271396,0.01410719379685209,0.06802121154271397,original full run config/log unresolved; not an exact protocol match claim
+NeurIPS_2026_MIRA_camera_ready_v1.pdf,3,9,TENT,nll,3.0312,2.8958639436297946,0.19260859932712396,-0.13533605637020552,original full run config/log unresolved; not an exact protocol match claim
+NeurIPS_2026_MIRA_camera_ready_v1.pdf,3,9,TENT+MIRA,accuracy_percent,45.17,48.96422240469191,2.3050476960142174,3.794222404691908,original full run config/log unresolved; not an exact protocol match claim
+NeurIPS_2026_MIRA_camera_ready_v1.pdf,3,9,TENT+MIRA,ece,0.0529,0.11643775969318489,0.03959632423499294,0.06353775969318488,original full run config/log unresolved; not an exact protocol match claim
+NeurIPS_2026_MIRA_camera_ready_v1.pdf,3,9,TENT+MIRA,nll,2.8159,2.8096493853463067,0.38214220620596606,-0.006250614653693365,original full run config/log unresolved; not an exact protocol match claim

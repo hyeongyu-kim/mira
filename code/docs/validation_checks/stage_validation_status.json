@@ -1,0 +1,42 @@
+[
+  {
+    "run_id": "stage_vit_b16_tent_s1__smoke",
+    "returncode": 0,
+    "seconds": 8.287130117416382,
+    "physical_gpu_index": 2,
+    "concurrent_main_validation": true,
+    "metric_delta_from_untrimmed_runtime": {
+      "accuracy_percent": 0.0,
+      "mmc": 0.0,
+      "ece": 0.0,
+      "nll": 0.0
+    }
+  },
+  {
+    "run_id": "stage_vit_b16_full_s1__smoke",
+    "returncode": 0,
+    "seconds": 8.441443681716919,
+    "physical_gpu_index": 2,
+    "concurrent_main_validation": true,
+    "metric_delta_from_untrimmed_runtime": {
+      "accuracy_percent": 0.0,
+      "mmc": 0.0,
+      "ece": 0.0,
+      "nll": 0.0
+    }
+  },
+  {
+    "run_id": "stage_c100_tent_s1__smoke",
+    "returncode": 0,
+    "seconds": 5.519605875015259,
+    "physical_gpu_index": 2,
+    "concurrent_main_validation": true
+  },
+  {
+    "run_id": "stage_c100_full_s1__smoke",
+    "returncode": 0,
+    "seconds": 5.752241373062134,
+    "physical_gpu_index": 2,
+    "concurrent_main_validation": true
+  }
+]

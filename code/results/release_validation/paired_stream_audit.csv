@@ -1,0 +1,91 @@
+dataset,backbone,seed,domain,target_stream_equal,batch_configuration_equal,tent_run,mira_run,ordered_image_ids_equal
+cifar100_c,Hendrycks2020AugMix_ResNeXt,1,gaussian_noise,True,True,release_c100_tent_s1,release_c100_full_s1,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,1,shot_noise,True,True,release_c100_tent_s1,release_c100_full_s1,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,1,impulse_noise,True,True,release_c100_tent_s1,release_c100_full_s1,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,1,defocus_blur,True,True,release_c100_tent_s1,release_c100_full_s1,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,1,glass_blur,True,True,release_c100_tent_s1,release_c100_full_s1,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,1,motion_blur,True,True,release_c100_tent_s1,release_c100_full_s1,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,1,zoom_blur,True,True,release_c100_tent_s1,release_c100_full_s1,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,1,snow,True,True,release_c100_tent_s1,release_c100_full_s1,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,1,frost,True,True,release_c100_tent_s1,release_c100_full_s1,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,1,fog,True,True,release_c100_tent_s1,release_c100_full_s1,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,1,brightness,True,True,release_c100_tent_s1,release_c100_full_s1,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,1,contrast,True,True,release_c100_tent_s1,release_c100_full_s1,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,1,elastic_transform,True,True,release_c100_tent_s1,release_c100_full_s1,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,1,pixelate,True,True,release_c100_tent_s1,release_c100_full_s1,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,1,jpeg_compression,True,True,release_c100_tent_s1,release_c100_full_s1,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,2,gaussian_noise,True,True,release_c100_tent_s2,release_c100_full_s2,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,2,shot_noise,True,True,release_c100_tent_s2,release_c100_full_s2,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,2,impulse_noise,True,True,release_c100_tent_s2,release_c100_full_s2,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,2,defocus_blur,True,True,release_c100_tent_s2,release_c100_full_s2,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,2,glass_blur,True,True,release_c100_tent_s2,release_c100_full_s2,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,2,motion_blur,True,True,release_c100_tent_s2,release_c100_full_s2,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,2,zoom_blur,True,True,release_c100_tent_s2,release_c100_full_s2,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,2,snow,True,True,release_c100_tent_s2,release_c100_full_s2,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,2,frost,True,True,release_c100_tent_s2,release_c100_full_s2,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,2,fog,True,True,release_c100_tent_s2,release_c100_full_s2,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,2,brightness,True,True,release_c100_tent_s2,release_c100_full_s2,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,2,contrast,True,True,release_c100_tent_s2,release_c100_full_s2,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,2,elastic_transform,True,True,release_c100_tent_s2,release_c100_full_s2,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,2,pixelate,True,True,release_c100_tent_s2,release_c100_full_s2,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,2,jpeg_compression,True,True,release_c100_tent_s2,release_c100_full_s2,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,3,gaussian_noise,True,True,release_c100_tent_s3,release_c100_full_s3,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,3,shot_noise,True,True,release_c100_tent_s3,release_c100_full_s3,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,3,impulse_noise,True,True,release_c100_tent_s3,release_c100_full_s3,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,3,defocus_blur,True,True,release_c100_tent_s3,release_c100_full_s3,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,3,glass_blur,True,True,release_c100_tent_s3,release_c100_full_s3,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,3,motion_blur,True,True,release_c100_tent_s3,release_c100_full_s3,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,3,zoom_blur,True,True,release_c100_tent_s3,release_c100_full_s3,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,3,snow,True,True,release_c100_tent_s3,release_c100_full_s3,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,3,frost,True,True,release_c100_tent_s3,release_c100_full_s3,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,3,fog,True,True,release_c100_tent_s3,release_c100_full_s3,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,3,brightness,True,True,release_c100_tent_s3,release_c100_full_s3,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,3,contrast,True,True,release_c100_tent_s3,release_c100_full_s3,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,3,elastic_transform,True,True,release_c100_tent_s3,release_c100_full_s3,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,3,pixelate,True,True,release_c100_tent_s3,release_c100_full_s3,not recorded in earlier worker
+cifar100_c,Hendrycks2020AugMix_ResNeXt,3,jpeg_compression,True,True,release_c100_tent_s3,release_c100_full_s3,not recorded in earlier worker
+imagenet_c,resnet50,1,gaussian_noise,True,True,release_in50_tent_s1,release_in50_full_s1,not recorded in earlier worker
+imagenet_c,resnet50,1,shot_noise,True,True,release_in50_tent_s1,release_in50_full_s1,not recorded in earlier worker
+imagenet_c,resnet50,1,impulse_noise,True,True,release_in50_tent_s1,release_in50_full_s1,not recorded in earlier worker
+imagenet_c,resnet50,1,defocus_blur,True,True,release_in50_tent_s1,release_in50_full_s1,not recorded in earlier worker
+imagenet_c,resnet50,1,glass_blur,True,True,release_in50_tent_s1,release_in50_full_s1,not recorded in earlier worker
+imagenet_c,resnet50,1,motion_blur,True,True,release_in50_tent_s1,release_in50_full_s1,not recorded in earlier worker
+imagenet_c,resnet50,1,zoom_blur,True,True,release_in50_tent_s1,release_in50_full_s1,not recorded in earlier worker
+imagenet_c,resnet50,1,snow,True,True,release_in50_tent_s1,release_in50_full_s1,not recorded in earlier worker
+imagenet_c,resnet50,1,frost,True,True,release_in50_tent_s1,release_in50_full_s1,not recorded in earlier worker
+imagenet_c,resnet50,1,fog,True,True,release_in50_tent_s1,release_in50_full_s1,not recorded in earlier worker
+imagenet_c,resnet50,1,brightness,True,True,release_in50_tent_s1,release_in50_full_s1,not recorded in earlier worker
+imagenet_c,resnet50,1,contrast,True,True,release_in50_tent_s1,release_in50_full_s1,not recorded in earlier worker
+imagenet_c,resnet50,1,elastic_transform,True,True,release_in50_tent_s1,release_in50_full_s1,not recorded in earlier worker
+imagenet_c,resnet50,1,pixelate,True,True,release_in50_tent_s1,release_in50_full_s1,not recorded in earlier worker
+imagenet_c,resnet50,1,jpeg_compression,True,True,release_in50_tent_s1,release_in50_full_s1,not recorded in earlier worker
+imagenet_c,resnet50,2,gaussian_noise,True,True,release_candidate_in50_tent_s2,release_candidate_in50_full_s2,True
+imagenet_c,resnet50,2,shot_noise,True,True,release_candidate_in50_tent_s2,release_candidate_in50_full_s2,True
+imagenet_c,resnet50,2,impulse_noise,True,True,release_candidate_in50_tent_s2,release_candidate_in50_full_s2,True
+imagenet_c,resnet50,2,defocus_blur,True,True,release_candidate_in50_tent_s2,release_candidate_in50_full_s2,True
+imagenet_c,resnet50,2,glass_blur,True,True,release_candidate_in50_tent_s2,release_candidate_in50_full_s2,True
+imagenet_c,resnet50,2,motion_blur,True,True,release_candidate_in50_tent_s2,release_candidate_in50_full_s2,True
+imagenet_c,resnet50,2,zoom_blur,True,True,release_candidate_in50_tent_s2,release_candidate_in50_full_s2,True
+imagenet_c,resnet50,2,snow,True,True,release_candidate_in50_tent_s2,release_candidate_in50_full_s2,True
+imagenet_c,resnet50,2,frost,True,True,release_candidate_in50_tent_s2,release_candidate_in50_full_s2,True
+imagenet_c,resnet50,2,fog,True,True,release_candidate_in50_tent_s2,release_candidate_in50_full_s2,True
+imagenet_c,resnet50,2,brightness,True,True,release_candidate_in50_tent_s2,release_candidate_in50_full_s2,True
+imagenet_c,resnet50,2,contrast,True,True,release_candidate_in50_tent_s2,release_candidate_in50_full_s2,True
+imagenet_c,resnet50,2,elastic_transform,True,True,release_candidate_in50_tent_s2,release_candidate_in50_full_s2,True
+imagenet_c,resnet50,2,pixelate,True,True,release_candidate_in50_tent_s2,release_candidate_in50_full_s2,True
+imagenet_c,resnet50,2,jpeg_compression,True,True,release_candidate_in50_tent_s2,release_candidate_in50_full_s2,True
+imagenet_c,resnet50,3,gaussian_noise,True,True,release_candidate_in50_tent_s3,release_candidate_in50_full_s3,True
+imagenet_c,resnet50,3,shot_noise,True,True,release_candidate_in50_tent_s3,release_candidate_in50_full_s3,True
+imagenet_c,resnet50,3,impulse_noise,True,True,release_candidate_in50_tent_s3,release_candidate_in50_full_s3,True
+imagenet_c,resnet50,3,defocus_blur,True,True,release_candidate_in50_tent_s3,release_candidate_in50_full_s3,True
+imagenet_c,resnet50,3,glass_blur,True,True,release_candidate_in50_tent_s3,release_candidate_in50_full_s3,True
+imagenet_c,resnet50,3,motion_blur,True,True,release_candidate_in50_tent_s3,release_candidate_in50_full_s3,True
+imagenet_c,resnet50,3,zoom_blur,True,True,release_candidate_in50_tent_s3,release_candidate_in50_full_s3,True
+imagenet_c,resnet50,3,snow,True,True,release_candidate_in50_tent_s3,release_candidate_in50_full_s3,True
+imagenet_c,resnet50,3,frost,True,True,release_candidate_in50_tent_s3,release_candidate_in50_full_s3,True
+imagenet_c,resnet50,3,fog,True,True,release_candidate_in50_tent_s3,release_candidate_in50_full_s3,True
+imagenet_c,resnet50,3,brightness,True,True,release_candidate_in50_tent_s3,release_candidate_in50_full_s3,True
+imagenet_c,resnet50,3,contrast,True,True,release_candidate_in50_tent_s3,release_candidate_in50_full_s3,True
+imagenet_c,resnet50,3,elastic_transform,True,True,release_candidate_in50_tent_s3,release_candidate_in50_full_s3,True
+imagenet_c,resnet50,3,pixelate,True,True,release_candidate_in50_tent_s3,release_candidate_in50_full_s3,True
+imagenet_c,resnet50,3,jpeg_compression,True,True,release_candidate_in50_tent_s3,release_candidate_in50_full_s3,True

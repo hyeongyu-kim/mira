@@ -1,0 +1,10 @@
+paper_item,pdf_page,scope,verified_status,public_command_or_config,limitations
+Table 1 / 6,8 / 14,ImageNet-C ResNet34 objectives/gates,archived means/SD verified; representative Full fresh seed1,configs/in34_*.json,All other objectives not re-executed in this release pass
+Table 2 TENT rows,8,CIFAR100 ResNeXt and ImageNet ResNet50,archived cells verified; fresh main seeds1/2/3 both methods,scripts/run_main.sh,Last printed digits/SD can differ; fresh evidence separated
+Table 3 ViT historical,9,42.03/45.17 single-run rows,original complete provenance unresolved,none,Do not label current profile exact historical Table3 reproduction
+Release ViT batch64 v1,separate release,TENT/MIRA 45.96/50.02 seed1,two complete current reference runs; paired streams verified,scripts/run_vit.sh,Seeds2/3 configs ready but unmeasured
+Previous ViT batch128,separate archive,paired seeds1/2/3,six complete separately labeled validation runs,scripts/run_vit.sh --profile vit_b16_batch128_previous,Never pool with current batch64
+Table 7,14,actual global-gradient norm1 controls,archived three-seed cells and gradient audit verified,table_commands.json:7,Distinct from ordinary gradients; max norm error 0.000248432
+Tables 8-10,15,CIFAR10 loss/gates; CIFAR100 WRN construction axes,archived three-seed cells verified; portable configs,"table_commands.json:8,9,10",Different dataset/optimizer/stream/K protocols retained
+Tables 13-16,17 / 18,alpha/rho; gamma; grids and diagnostic costs,archived three-seed cells verified; portable configs,"table_commands.json:13,14,15,16",High fallback and grid-dependent MI range preserved; timings host dependent
+Other plug-ins / CLIP / figures,not released,outside selected public scope,no public reproduction claim,,README figure slots reserved; deployed website assets retained

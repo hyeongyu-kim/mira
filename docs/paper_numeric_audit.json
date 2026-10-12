@@ -1,0 +1,950 @@
+{
+  "paper_filename": "NeurIPS_2026_MIRA_camera_ready_v1.pdf",
+  "paper_sha256": "63602757825d66027b7b496c40ec0319006fb4212091e58590c3737a392d029b",
+  "archived_runs": 217,
+  "recomputed_groups": 73,
+  "mean_sd_tables": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    13,
+    14,
+    15,
+    16
+  ],
+  "matched_rows": [
+    {
+      "table": 6,
+      "row": "Source",
+      "dataset": "imagenet_c",
+      "backbone": "resnet34",
+      "run_ids": [
+        "in34_source_s1",
+        "in34_source_s2",
+        "in34_source_s3"
+      ]
+    },
+    {
+      "table": 6,
+      "row": "TENT",
+      "dataset": "imagenet_c",
+      "backbone": "resnet34",
+      "run_ids": [
+        "in34_tent_s1",
+        "in34_tent_s2",
+        "in34_tent_s3"
+      ]
+    },
+    {
+      "table": 6,
+      "row": "TENT-2H",
+      "dataset": "imagenet_c",
+      "backbone": "resnet34",
+      "run_ids": [
+        "in34_tent2_s1",
+        "in34_tent2_s2",
+        "in34_tent2_s3"
+      ]
+    },
+    {
+      "table": 6,
+      "row": "HE",
+      "dataset": "imagenet_c",
+      "backbone": "resnet34",
+      "run_ids": [
+        "in34_he_s1",
+        "in34_he_s2",
+        "in34_he_s3"
+      ]
+    },
+    {
+      "table": 6,
+      "row": "EH",
+      "dataset": "imagenet_c",
+      "backbone": "resnet34",
+      "run_ids": [
+        "in34_eh_s1",
+        "in34_eh_s2",
+        "in34_eh_s3"
+      ]
+    },
+    {
+      "table": 6,
+      "row": "MI",
+      "dataset": "imagenet_c",
+      "backbone": "resnet34",
+      "run_ids": [
+        "in34_mi_s1",
+        "in34_mi_s2",
+        "in34_mi_s3"
+      ]
+    },
+    {
+      "table": 6,
+      "row": "wMI HE",
+      "dataset": "imagenet_c",
+      "backbone": "resnet34",
+      "run_ids": [
+        "in34_mw_he_s1",
+        "in34_mw_he_s2",
+        "in34_mw_he_s3"
+      ]
+    },
+    {
+      "table": 6,
+      "row": "H E + EH",
+      "dataset": "imagenet_c",
+      "backbone": "resnet34",
+      "run_ids": [
+        "in34_unweighted_s1",
+        "in34_unweighted_s2",
+        "in34_unweighted_s3"
+      ]
+    },
+    {
+      "table": 6,
+      "row": "wMI (HE + EH )",
+      "dataset": "imagenet_c",
+      "backbone": "resnet34",
+      "run_ids": [
+        "in34_mi_only_s1",
+        "in34_mi_only_s2",
+        "in34_mi_only_s3"
+      ]
+    },
+    {
+      "table": 6,
+      "row": "wconf (HE + EH )",
+      "dataset": "imagenet_c",
+      "backbone": "resnet34",
+      "run_ids": [
+        "in34_confidence_only_s1",
+        "in34_confidence_only_s2",
+        "in34_confidence_only_s3"
+      ]
+    },
+    {
+      "table": 6,
+      "row": "Full MIRATENT",
+      "dataset": "imagenet_c",
+      "backbone": "resnet34",
+      "run_ids": [
+        "in34_full_s1",
+        "in34_full_s2",
+        "in34_full_s3"
+      ]
+    },
+    {
+      "table": 7,
+      "row": "TENT",
+      "dataset": "cifar10_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c10_gradmatch_tent_s1",
+        "c10_gradmatch_tent_s2",
+        "c10_gradmatch_tent_s3"
+      ]
+    },
+    {
+      "table": 7,
+      "row": "H E + EH",
+      "dataset": "cifar10_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c10_gradmatch_unweighted_s1",
+        "c10_gradmatch_unweighted_s2",
+        "c10_gradmatch_unweighted_s3"
+      ]
+    },
+    {
+      "table": 7,
+      "row": "+ MI gate",
+      "dataset": "cifar10_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c10_gradmatch_mi_only_s1",
+        "c10_gradmatch_mi_only_s2",
+        "c10_gradmatch_mi_only_s3"
+      ]
+    },
+    {
+      "table": 7,
+      "row": "+ confidence gate",
+      "dataset": "cifar10_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c10_gradmatch_confidence_only_s1",
+        "c10_gradmatch_confidence_only_s2",
+        "c10_gradmatch_confidence_only_s3"
+      ]
+    },
+    {
+      "table": 7,
+      "row": "Full MIRATENT",
+      "dataset": "cifar10_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c10_gradmatch_full_s1",
+        "c10_gradmatch_full_s2",
+        "c10_gradmatch_full_s3"
+      ]
+    },
+    {
+      "table": 7,
+      "row": "TENT",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_gradmatch_tent_s1",
+        "c100_gradmatch_tent_s2",
+        "c100_gradmatch_tent_s3"
+      ]
+    },
+    {
+      "table": 7,
+      "row": "H E + EH",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_gradmatch_unweighted_s1",
+        "c100_gradmatch_unweighted_s2",
+        "c100_gradmatch_unweighted_s3"
+      ]
+    },
+    {
+      "table": 7,
+      "row": "+ MI gate",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_gradmatch_mi_only_s1",
+        "c100_gradmatch_mi_only_s2",
+        "c100_gradmatch_mi_only_s3"
+      ]
+    },
+    {
+      "table": 7,
+      "row": "+ confidence gate",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_gradmatch_confidence_only_s1",
+        "c100_gradmatch_confidence_only_s2",
+        "c100_gradmatch_confidence_only_s3"
+      ]
+    },
+    {
+      "table": 7,
+      "row": "Full MIRATENT",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_gradmatch_full_s1",
+        "c100_gradmatch_full_s2",
+        "c100_gradmatch_full_s3"
+      ]
+    },
+    {
+      "table": 7,
+      "row": "TENT",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_gradmatch_tent_s1",
+        "in50_gradmatch_tent_s2",
+        "in50_gradmatch_tent_s3"
+      ]
+    },
+    {
+      "table": 7,
+      "row": "H E + EH",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_gradmatch_unweighted_s1",
+        "in50_gradmatch_unweighted_s2",
+        "in50_gradmatch_unweighted_s3"
+      ]
+    },
+    {
+      "table": 7,
+      "row": "+ MI gate",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_gradmatch_mi_only_s1",
+        "in50_gradmatch_mi_only_s2",
+        "in50_gradmatch_mi_only_s3"
+      ]
+    },
+    {
+      "table": 7,
+      "row": "+ confidence gate",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_gradmatch_confidence_only_s1",
+        "in50_gradmatch_confidence_only_s2",
+        "in50_gradmatch_confidence_only_s3"
+      ]
+    },
+    {
+      "table": 7,
+      "row": "Full MIRATENT",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_gradmatch_full_s1",
+        "in50_gradmatch_full_s2",
+        "in50_gradmatch_full_s3"
+      ]
+    },
+    {
+      "table": 8,
+      "row": "TENT",
+      "dataset": "cifar10_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c10_vanilla_tent_s1",
+        "c10_vanilla_tent_s2",
+        "c10_vanilla_tent_s3"
+      ]
+    },
+    {
+      "table": 8,
+      "row": "H E + EH",
+      "dataset": "cifar10_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c10_vanilla_unweighted_s1",
+        "c10_vanilla_unweighted_s2",
+        "c10_vanilla_unweighted_s3"
+      ]
+    },
+    {
+      "table": 8,
+      "row": "+ MI gate",
+      "dataset": "cifar10_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c10_vanilla_mi_only_s1",
+        "c10_vanilla_mi_only_s2",
+        "c10_vanilla_mi_only_s3"
+      ]
+    },
+    {
+      "table": 8,
+      "row": "+ confidence gate",
+      "dataset": "cifar10_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c10_vanilla_confidence_only_s1",
+        "c10_vanilla_confidence_only_s2",
+        "c10_vanilla_confidence_only_s3"
+      ]
+    },
+    {
+      "table": 8,
+      "row": "Full MIRATENT",
+      "dataset": "cifar10_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c10_vanilla_full_s1",
+        "c10_vanilla_full_s2",
+        "c10_vanilla_full_s3"
+      ]
+    },
+    {
+      "table": 9,
+      "row": "TENT",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c100wrn_tent_s1",
+        "c100wrn_tent_s2",
+        "c100wrn_tent_s3"
+      ]
+    },
+    {
+      "table": 9,
+      "row": "Feature-wise",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c100wrn_feature_s1",
+        "c100wrn_feature_s2",
+        "c100wrn_feature_s3"
+      ]
+    },
+    {
+      "table": 9,
+      "row": "Scalar",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c100wrn_scalar_s1",
+        "c100wrn_scalar_s2",
+        "c100wrn_scalar_s3"
+      ]
+    },
+    {
+      "table": 9,
+      "row": "Class-wise",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c100wrn_class_s1",
+        "c100wrn_class_s2",
+        "c100wrn_class_s3"
+      ]
+    },
+    {
+      "table": 10,
+      "row": "TENT",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c100wrn_tent_s1",
+        "c100wrn_tent_s2",
+        "c100wrn_tent_s3"
+      ]
+    },
+    {
+      "table": 10,
+      "row": "He-in",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c100wrn_feature_s1",
+        "c100wrn_feature_s2",
+        "c100wrn_feature_s3"
+      ]
+    },
+    {
+      "table": 10,
+      "row": "Fan-in",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c100wrn_scalefan_in_s1",
+        "c100wrn_scalefan_in_s2",
+        "c100wrn_scalefan_in_s3"
+      ]
+    },
+    {
+      "table": 10,
+      "row": "Absolute",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c100wrn_scaleabsolute_s1",
+        "c100wrn_scaleabsolute_s2",
+        "c100wrn_scaleabsolute_s3"
+      ]
+    },
+    {
+      "table": 10,
+      "row": "Weight magnitude",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_WRN",
+      "run_ids": [
+        "c100wrn_scaleweight_abs_s1",
+        "c100wrn_scaleweight_abs_s2",
+        "c100wrn_scaleweight_abs_s3"
+      ]
+    },
+    {
+      "table": 13,
+      "row": "\u03b1 = 0.01,   \u03c1 = 0.85",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_ar_a0.01_r0.85_s1",
+        "c100_ar_a0.01_r0.85_s2",
+        "c100_ar_a0.01_r0.85_s3"
+      ]
+    },
+    {
+      "table": 13,
+      "row": "\u03b1 = 0.01,   \u03c1 = 0.90",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_ar_a0.01_r0.9_s1",
+        "c100_ar_a0.01_r0.9_s2",
+        "c100_ar_a0.01_r0.9_s3"
+      ]
+    },
+    {
+      "table": 13,
+      "row": "\u03b1 = 0.01,   \u03c1 = 0.95",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_ar_a0.01_r0.95_s1",
+        "c100_ar_a0.01_r0.95_s2",
+        "c100_ar_a0.01_r0.95_s3"
+      ]
+    },
+    {
+      "table": 13,
+      "row": "\u03b1 = 0.03,   \u03c1 = 0.85",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_ar_a0.03_r0.85_s1",
+        "c100_ar_a0.03_r0.85_s2",
+        "c100_ar_a0.03_r0.85_s3"
+      ]
+    },
+    {
+      "table": 13,
+      "row": "\u03b1 = 0.03,   \u03c1 = 0.90",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_full_s1",
+        "c100_full_s2",
+        "c100_full_s3"
+      ]
+    },
+    {
+      "table": 13,
+      "row": "\u03b1 = 0.03,   \u03c1 = 0.95",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_ar_a0.03_r0.95_s1",
+        "c100_ar_a0.03_r0.95_s2",
+        "c100_ar_a0.03_r0.95_s3"
+      ]
+    },
+    {
+      "table": 13,
+      "row": "\u03b1 = 0.10,   \u03c1 = 0.85",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_ar_a0.1_r0.85_s1",
+        "c100_ar_a0.1_r0.85_s2",
+        "c100_ar_a0.1_r0.85_s3"
+      ]
+    },
+    {
+      "table": 13,
+      "row": "\u03b1 = 0.10,   \u03c1 = 0.90",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_ar_a0.1_r0.9_s1",
+        "c100_ar_a0.1_r0.9_s2",
+        "c100_ar_a0.1_r0.9_s3"
+      ]
+    },
+    {
+      "table": 13,
+      "row": "\u03b1 = 0.10,   \u03c1 = 0.95",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_ar_a0.1_r0.95_s1",
+        "c100_ar_a0.1_r0.95_s2",
+        "c100_ar_a0.1_r0.95_s3"
+      ]
+    },
+    {
+      "table": 13,
+      "row": "\u03b1 = 0.01,   \u03c1 = 0.85",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_ar_a0.01_r0.85_s1",
+        "in50_ar_a0.01_r0.85_s2",
+        "in50_ar_a0.01_r0.85_s3"
+      ]
+    },
+    {
+      "table": 13,
+      "row": "\u03b1 = 0.01,   \u03c1 = 0.90",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_ar_a0.01_r0.9_s1",
+        "in50_ar_a0.01_r0.9_s2",
+        "in50_ar_a0.01_r0.9_s3"
+      ]
+    },
+    {
+      "table": 13,
+      "row": "\u03b1 = 0.01,   \u03c1 = 0.95",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_ar_a0.01_r0.95_s1",
+        "in50_ar_a0.01_r0.95_s2",
+        "in50_ar_a0.01_r0.95_s3"
+      ]
+    },
+    {
+      "table": 13,
+      "row": "\u03b1 = 0.03,   \u03c1 = 0.85",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_ar_a0.03_r0.85_s1",
+        "in50_ar_a0.03_r0.85_s2",
+        "in50_ar_a0.03_r0.85_s3"
+      ]
+    },
+    {
+      "table": 13,
+      "row": "\u03b1 = 0.03,   \u03c1 = 0.90",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_full_s1",
+        "in50_full_s2",
+        "in50_full_s3"
+      ]
+    },
+    {
+      "table": 13,
+      "row": "\u03b1 = 0.03,   \u03c1 = 0.95",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_ar_a0.03_r0.95_s1",
+        "in50_ar_a0.03_r0.95_s2",
+        "in50_ar_a0.03_r0.95_s3"
+      ]
+    },
+    {
+      "table": 13,
+      "row": "\u03b1 = 0.10,   \u03c1 = 0.85",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_ar_a0.1_r0.85_s1",
+        "in50_ar_a0.1_r0.85_s2",
+        "in50_ar_a0.1_r0.85_s3"
+      ]
+    },
+    {
+      "table": 13,
+      "row": "\u03b1 = 0.10,   \u03c1 = 0.90",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_ar_a0.1_r0.9_s1",
+        "in50_ar_a0.1_r0.9_s2",
+        "in50_ar_a0.1_r0.9_s3"
+      ]
+    },
+    {
+      "table": 13,
+      "row": "\u03b1 = 0.10,   \u03c1 = 0.95",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_ar_a0.1_r0.95_s1",
+        "in50_ar_a0.1_r0.95_s2",
+        "in50_ar_a0.1_r0.95_s3"
+      ]
+    },
+    {
+      "table": 14,
+      "row": "\u03b3    =0",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_gamma0_s1",
+        "c100_gamma0_s2",
+        "c100_gamma0_s3"
+      ]
+    },
+    {
+      "table": 14,
+      "row": "\u03b3    = 0.25",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_gamma0.25_s1",
+        "c100_gamma0.25_s2",
+        "c100_gamma0.25_s3"
+      ]
+    },
+    {
+      "table": 14,
+      "row": "\u03b3    = 0.5",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_gamma0.5_s1",
+        "c100_gamma0.5_s2",
+        "c100_gamma0.5_s3"
+      ]
+    },
+    {
+      "table": 14,
+      "row": "\u03b3    =1",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_full_s1",
+        "c100_full_s2",
+        "c100_full_s3"
+      ]
+    },
+    {
+      "table": 14,
+      "row": "\u03b3    =2",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_gamma2_s1",
+        "c100_gamma2_s2",
+        "c100_gamma2_s3"
+      ]
+    },
+    {
+      "table": 14,
+      "row": "\u03b3    =0",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_gamma0_s1",
+        "in50_gamma0_s2",
+        "in50_gamma0_s3"
+      ]
+    },
+    {
+      "table": 14,
+      "row": "\u03b3    = 0.25",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_gamma0.25_s1",
+        "in50_gamma0.25_s2",
+        "in50_gamma0.25_s3"
+      ]
+    },
+    {
+      "table": 14,
+      "row": "\u03b3    = 0.5",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_gamma0.5_s1",
+        "in50_gamma0.5_s2",
+        "in50_gamma0.5_s3"
+      ]
+    },
+    {
+      "table": 14,
+      "row": "\u03b3    =1",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_full_s1",
+        "in50_full_s2",
+        "in50_full_s3"
+      ]
+    },
+    {
+      "table": 14,
+      "row": "\u03b3    =2",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_gamma2_s1",
+        "in50_gamma2_s2",
+        "in50_gamma2_s3"
+      ]
+    },
+    {
+      "table": 15,
+      "row": "Original 16",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_full_s1",
+        "c100_full_s2",
+        "c100_full_s3"
+      ]
+    },
+    {
+      "table": 15,
+      "row": "Coarse 9",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_coarse9_s1",
+        "c100_coarse9_s2",
+        "c100_coarse9_s3"
+      ]
+    },
+    {
+      "table": 15,
+      "row": "Dense 31",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_dense31_s1",
+        "c100_dense31_s2",
+        "c100_dense31_s3"
+      ]
+    },
+    {
+      "table": 15,
+      "row": "Extended 20",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_extended20_s1",
+        "c100_extended20_s2",
+        "c100_extended20_s3"
+      ]
+    },
+    {
+      "table": 15,
+      "row": "Original 16",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_full_s1",
+        "in50_full_s2",
+        "in50_full_s3"
+      ]
+    },
+    {
+      "table": 15,
+      "row": "Coarse 9",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_coarse9_s1",
+        "in50_coarse9_s2",
+        "in50_coarse9_s3"
+      ]
+    },
+    {
+      "table": 15,
+      "row": "Dense 31",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_dense31_s1",
+        "in50_dense31_s2",
+        "in50_dense31_s3"
+      ]
+    },
+    {
+      "table": 15,
+      "row": "Extended 20",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_extended20_s1",
+        "in50_extended20_s2",
+        "in50_extended20_s3"
+      ]
+    },
+    {
+      "table": 16,
+      "row": "Original 16",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_full_s1",
+        "c100_full_s2",
+        "c100_full_s3"
+      ]
+    },
+    {
+      "table": 16,
+      "row": "Coarse 9",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_coarse9_s1",
+        "c100_coarse9_s2",
+        "c100_coarse9_s3"
+      ]
+    },
+    {
+      "table": 16,
+      "row": "Dense 31",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_dense31_s1",
+        "c100_dense31_s2",
+        "c100_dense31_s3"
+      ]
+    },
+    {
+      "table": 16,
+      "row": "Extended 20",
+      "dataset": "cifar100_c",
+      "backbone": "Hendrycks2020AugMix_ResNeXt",
+      "run_ids": [
+        "c100_extended20_s1",
+        "c100_extended20_s2",
+        "c100_extended20_s3"
+      ]
+    },
+    {
+      "table": 16,
+      "row": "Original 16",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_full_s1",
+        "in50_full_s2",
+        "in50_full_s3"
+      ]
+    },
+    {
+      "table": 16,
+      "row": "Coarse 9",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_coarse9_s1",
+        "in50_coarse9_s2",
+        "in50_coarse9_s3"
+      ]
+    },
+    {
+      "table": 16,
+      "row": "Dense 31",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_dense31_s1",
+        "in50_dense31_s2",
+        "in50_dense31_s3"
+      ]
+    },
+    {
+      "table": 16,
+      "row": "Extended 20",
+      "dataset": "imagenet_c",
+      "backbone": "resnet50",
+      "run_ids": [
+        "in50_extended20_s1",
+        "in50_extended20_s2",
+        "in50_extended20_s3"
+      ]
+    }
+  ],
+  "matched_numeric_cells": 804,
+  "table1_mean_cells": 40,
+  "table1_sd_cells": 40,
+  "table2_accuracy_sd_cells": 4,
+  "all_supported_numeric_cells_match": true,
+  "scope": "TENT/MIRA and released CNN controls only; no exact historical ViT Table3 reproduction claim",
+  "historical_viT": "Original 42.03/45.17 config not recovered; current batch64 seed1 is a separate selected release reference."
+}

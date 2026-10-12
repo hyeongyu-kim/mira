@@ -1,0 +1,23 @@
+{
+  "backbone": "resnet50",
+  "checkpoint_sha256": "0676ba61b6795bbe1773cffd859882e5e297624d384b6993f7c9e683e722fb8a",
+  "attention_fused": [],
+  "layernorm_eps": [],
+  "normalization": [
+    {
+      "name": "normalize",
+      "mean": [
+        0.48500001430511475,
+        0.4560000002384186,
+        0.4059999883174896
+      ],
+      "std": [
+        0.2290000021457672,
+        0.2240000069141388,
+        0.22499999403953552
+      ]
+    }
+  ],
+  "prediction_dtype": "torch.float32",
+  "imagenet_c_preprocessing": "already224x224; PIL RGB and ToTensor; normalization in model"
+}

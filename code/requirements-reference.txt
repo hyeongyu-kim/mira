@@ -1,0 +1,14 @@
+torch==2.2.1
+torchvision==0.17.1
+numpy==1.26.4
+timm==1.0.15
+yacs==0.1.8
+webdataset==0.2.111
+gdown==6.0.0
+scipy==1.15.2
+pandas==2.2.3
+scikit-learn==1.7.2
+matplotlib==3.10.3
+Pillow==10.2.0
+PyYAML==6.0.1
+setuptools==68.2.2
