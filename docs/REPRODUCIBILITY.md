@@ -90,6 +90,16 @@ python scripts/check_assets.py --scope all --check-data
 bash scripts/run_vit.sh --dry-run
 ```
 
+The clean-clone validation passed on commit
+`cab51ed5c54b8ceb7ea60c39b084f8b0854f585b`: an isolated editable install, all source/config
+hashes and assets, 15 CPU tests, and two final-worker ViT GPU smokes. Both smokes match
+all four original batch64 smoke metrics within 1e−6 and correctly record that public commit
+with a clean worktree. The final follow-up commit only adds these validation records and this
+note; its scientific source/config hashes are identical. The conda environment was inherited
+from the measured reference packages for this installation check; a from-scratch conda
+network installation was not performed. See
+[clone_validation.json](../code/docs/validation_checks/clone_validation.json).
+
 The checked conda/Python versions and JPEG decoder match the reference environment.
 CUDA evaluation used NVIDIA RTX A6000 physical GPUs2/3. Runtime depends on host load
 and allocator warm-up; Table16's archived cost records are not promised as identical fresh

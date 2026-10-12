@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "tested_public_commit": "cab51ed5c54b8ceb7ea60c39b084f8b0854f585b",
+  "installation": "isolated venv with inherited pinned reference packages; editable package install without dependency/environment mutation",
+  "checks": [
+    {
+      "name": "source_configs_statistics",
+      "passed": true
+    },
+    {
+      "name": "reference_environment",
+      "passed": true
+    },
+    {
+      "name": "source_checkpoints_data",
+      "passed": true
+    },
+    {
+      "name": "cpu_scientific_tests",
+      "passed": true
+    },
+    {
+      "name": "default_vit_commands",
+      "passed": true
+    },
+    {
+      "name": "clone_vit64_tent_s1__smoke",
+      "passed": true,
+      "kind": "smoke_only",
+      "physical_gpu": 2,
+      "metric_delta_from_original_batch64_smoke": {
+        "accuracy_percent": 0.0,
+        "mmc": 0.0,
+        "ece": 0.0,
+        "nll": 0.0
+      },
+      "public_repository_commit": "cab51ed5c54b8ceb7ea60c39b084f8b0854f585b",
+      "public_working_tree_modified": false,
+      "worker_sha256": "b640f4db8eeadce2c874ca966981bdff2feda1024af895ab8944691e12543851"
+    },
+    {
+      "name": "clone_vit64_full_s1__smoke",
+      "passed": true,
+      "kind": "smoke_only",
+      "physical_gpu": 2,
+      "metric_delta_from_original_batch64_smoke": {
+        "accuracy_percent": 0.0,
+        "mmc": 0.0,
+        "ece": 0.0,
+        "nll": 0.0
+      },
+      "public_repository_commit": "cab51ed5c54b8ceb7ea60c39b084f8b0854f585b",
+      "public_working_tree_modified": false,
+      "worker_sha256": "b640f4db8eeadce2c874ca966981bdff2feda1024af895ab8944691e12543851"
+    }
+  ],
+  "full_gpu_benchmark_rerun": false,
+  "scope": "offline/CPU checks plus two final-worker ViT GPU smokes; full CNN/ViT evaluations exported separately"
+}
