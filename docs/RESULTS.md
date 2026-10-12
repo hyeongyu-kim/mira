@@ -2,8 +2,8 @@
 
 ## CNN camera-ready reference
 
-These are the archived **three-seed TENT rows of Table 2**, in
-`NeurIPS_2026_MIRA_camera_ready_v1.pdf`, page 8. Each entry is mean ± sample SD (ddof=1).
+These are the archived **three-seed TENT rows of Table 2 / 26**, in
+`NeurIPS_2026_MIRA_camera_ready_v1.pdf`, pages 8 / 24; Table 27 (page 25) lists the corresponding seed values. Each entry is mean ± sample SD (ddof=1).
 Accuracy and its SD use percent and percentage points. The reference seed CSV is kept
 separate from the fresh release-validation CSV.
 
@@ -18,7 +18,9 @@ CIFAR-100-C uses the ResNeXt AugMix source, SGD at 0.001 and batch 64. ImageNet-
 ResNet-50 V1, SGD at 0.00025 and batch 64. Both use momentum 0.9, Nesterov, zero weight
 decay, one update per batch, 15 severity-5 corruptions, 10,000 samples per corruption and
 source/optimizer reset between corruptions. This public ResNeXt recipe is the camera-ready
-TENT learning-rate protocol; older submission/rebuttal protocols must not be pooled with it.
+TENT learning-rate protocol; older submission/rebuttal protocols must not be pooled with it. The additional Table 28
+TENT rows use seeds 2/4/6; they are a separate retained comparison, outside this default
+profile and its seeds 1/2/3. No exact Table 28 replay command is claimed here.
 
 ## Selected ViT batch-64 reference
 
@@ -59,7 +61,7 @@ SDs were independently recomputed from seed CSVs; printed cells match the PDF.
 | Table | Page | Released comparison | Scientific distinction |
 |---|---:|---|---|
 | 1 / 6 | 8 / 14 | ResNet-34 objective/gate ablation | SGD 0.00025; ordinary gradients; Table 6 adds confidence-only |
-| 2, TENT rows | 8 | ResNeXt and ResNet-50 main comparison | Separate dataset-specific learning rates |
+| 2 / 26 / 27, TENT rows | 8 / 24 / 25 | ResNeXt and ResNet-50 main comparison | Separate dataset-specific learning rates |
 | 7 | 14 | Global gradient-matched objective/gates | Actual adaptation-gradient global L2 norm targeted to 1; separate controls |
 | 8 | 15 | Ordinary CIFAR-10 WRN objective/gates | Adam 0.001; four corruptions; K=100 |
 | 9 | 15 | Feature/scalar/class scale | CIFAR-100 WRN; K=100; shuffle only; fixed He-in base |
@@ -103,7 +105,7 @@ All paths below are relative to [code/results](../code/results/):
 - `vit_paired_*differences.csv`, `vit_validation/`: paired differences and complete current ViT diagnostics.
 - `archive/vit_batch128/`: the previous measured ViT profile, never pooled with batch 64.
 
-The explicitly labeled `c100_published_table23_s1` row is an older single-run HE-only,
+The explicitly labeled `c100_published_table23_s1` row is an older single-run unweighted HE+EH,
 ρ=.95 historical control. Its separate scientific group is retained for traceability and is
 not the current Full MIRA headline reference or a three-seed result.
 

@@ -8,3 +8,4 @@ Table 7,14,actual global-gradient norm1 controls,archived three-seed cells and g
 Tables 8-10,15,CIFAR10 loss/gates; CIFAR100 WRN construction axes,archived three-seed cells verified; portable configs,"table_commands.json:8,9,10",Different dataset/optimizer/stream/K protocols retained
 Tables 13-16,17 / 18,alpha/rho; gamma; grids and diagnostic costs,archived three-seed cells verified; portable configs,"table_commands.json:13,14,15,16",High fallback and grid-dependent MI range preserved; timings host dependent
 Other plug-ins / CLIP / figures,not released,outside selected public scope,no public reproduction claim,,README figure slots reserved; deployed website assets retained
+"Tables 26 / 27, TENT rows",24 / 25,Full metric deviations and twelve main seed values,archived printed cells and exact source rows verified,"table_commands.json:26 TENT rows,27",Fresh validation is kept separate; additional Table28 seeds2/4/6 are outside default profile

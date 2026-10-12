@@ -90,7 +90,7 @@ sample weights alone are not treated as gradient matching.
 
 ## Reference results
 
-CNN rows below are the archived three-seed camera-ready reference for **Table 2, TENT rows**.
+CNN rows below are the archived three-seed camera-ready reference for **Table 2, TENT rows** (full deviations and seed values: Tables 26 / 27).
 Accuracy is mean ± sample SD in percentage points; the other columns show means.
 Fresh release checks are reported separately in [Reproducibility](docs/REPRODUCIBILITY.md).
 

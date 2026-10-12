@@ -9,8 +9,9 @@ paper has been freshly rerun.
 
 The checked document is `NeurIPS_2026_MIRA_camera_ready_v1.pdf` (SHA256
 `63602757825d66027b7b496c40ec0319006fb4212091e58590c3737a392d029b`).
-**804 displayed numerical cells** match their archived seed evidence at printed precision:
-Table 1 (means and SDs), Table 2's four released TENT/MIRA rows, and Tables 6–10 and 13–16.
+**884 displayed numerical cells** match their archived seed evidence at printed precision:
+Table 1 (means and SDs), Table 2's four released TENT/MIRA rows, Tables 6–10 and 13–16,
+Table 26's released pairs and Table 27's 12 individual seed rows.
 Statistics were recomputed from 217 seed rows across 73 separate scientific groups, with
 sample SD (ddof=1). Table 1 uses accuracy fractions; the other supported tables use percent.
 The audit includes the Table 16 memory-unit conversions and zero boundary frequencies.
@@ -94,8 +95,8 @@ The clean-clone validation passed on commit
 `cab51ed5c54b8ceb7ea60c39b084f8b0854f585b`: an isolated editable install, all source/config
 hashes and assets, 15 CPU tests, and two final-worker ViT GPU smokes. Both smokes match
 all four original batch64 smoke metrics within 1e−6 and correctly record that public commit
-with a clean worktree. The final follow-up commit only adds these validation records and this
-note; its scientific source/config hashes are identical. The conda environment was inherited
+with a clean worktree. The follow-up commits add or clarify validation records, table mapping and documentation;
+their scientific source/config hashes are identical. The conda environment was inherited
 from the measured reference packages for this installation check; a from-scratch conda
 network installation was not performed. See
 [clone_validation.json](../code/docs/validation_checks/clone_validation.json).

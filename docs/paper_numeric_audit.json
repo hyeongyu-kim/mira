@@ -12,7 +12,8 @@
     13,
     14,
     15,
-    16
+    16,
+    26
   ],
   "matched_rows": [
     {
@@ -940,11 +941,17 @@
       ]
     }
   ],
-  "matched_numeric_cells": 804,
+  "matched_numeric_cells": 884,
   "table1_mean_cells": 40,
   "table1_sd_cells": 40,
   "table2_accuracy_sd_cells": 4,
+  "table26_released_mean_sd_cells": 32,
+  "table27_per_seed_cells": 48,
   "all_supported_numeric_cells_match": true,
   "scope": "TENT/MIRA and released CNN controls only; no exact historical ViT Table3 reproduction claim",
-  "historical_viT": "Original 42.03/45.17 config not recovered; current batch64 seed1 is a separate selected release reference."
+  "historical_viT": "Original 42.03/45.17 config not recovered; current batch64 seed1 is a separate selected release reference.",
+  "per_seed_tables": [
+    27
+  ],
+  "table26_scope": "TENT and Full MIRA rows only"
 }

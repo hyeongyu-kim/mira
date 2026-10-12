@@ -322,5 +322,33 @@
   "Release ViT batch64 v1": [
     "configs/vit_b16_tent_s1.json",
     "configs/vit_b16_full_s1.json"
+  ],
+  "26 TENT rows": [
+    "configs/c100_full_s1.json",
+    "configs/c100_full_s2.json",
+    "configs/c100_full_s3.json",
+    "configs/c100_tent_s1.json",
+    "configs/c100_tent_s2.json",
+    "configs/c100_tent_s3.json",
+    "configs/in50_full_s1.json",
+    "configs/in50_full_s2.json",
+    "configs/in50_full_s3.json",
+    "configs/in50_tent_s1.json",
+    "configs/in50_tent_s2.json",
+    "configs/in50_tent_s3.json"
+  ],
+  "27": [
+    "configs/c100_full_s1.json",
+    "configs/c100_full_s2.json",
+    "configs/c100_full_s3.json",
+    "configs/c100_tent_s1.json",
+    "configs/c100_tent_s2.json",
+    "configs/c100_tent_s3.json",
+    "configs/in50_full_s1.json",
+    "configs/in50_full_s2.json",
+    "configs/in50_full_s3.json",
+    "configs/in50_tent_s1.json",
+    "configs/in50_tent_s2.json",
+    "configs/in50_tent_s3.json"
   ]
 }
