@@ -7,52 +7,67 @@
   <meta name="theme-color" content="#ffffff">
   <title>MIRA | Reliable Test-Time Adaptation</title>
   <link rel="icon" href="static/images/favicon.svg?v=mummy-1" type="image/svg+xml">
-  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans&amp;display=swap">
+<link rel="stylesheet" href="static/css/bulma.min.css">
+<link rel="stylesheet" href="static/css/actta.css?v=20261012">
+<link rel="stylesheet" href="static/css/mira.css?v=20261012">
   <script defer src="static/js/index.js"></script>
+<link rel="canonical" href="https://hyeongyu-kim.github.io/mira/">
+<meta property="og:title" content="MIRA: Mutual Information guided calibration for Reliable Test-Time Adaptation">
+<meta property="og:url" content="https://hyeongyu-kim.github.io/mira/">
+<meta property="og:image" content="https://hyeongyu-kim.github.io/mira/static/images/mira-overview-camera-ready.png?v=20261012">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
   <a class="skip-link" href="#abstract">Skip to content</a>
-  <header class="publication-header" id="top">
-    <div class="container">
-      <h1><span class="title-line"><strong class="project-name">MIRA:</strong> Mutual Information guided calibration</span><span class="title-line">for Reliable Test-Time Adaptation</span></h1>
-      <p class="venue">NeurIPS 2026 <span aria-hidden="true">·</span> Poster</p>
-      <div class="authors">
+  <header class="hero publication-header" id="top">
+    <div class="hero-body">
+<div class="container is-max-desktop">
+      <h1 class="title is-1 publication-title">MIRA: Mutual Information guided calibration for Reliable Test-Time Adaptation</h1>
+<p class="venue is-size-5 publication-authors">NeurIPS 2026 <span aria-hidden="true">·</span> Poster</p>
+      <div class="authors is-size-5 publication-authors">
         <span><a href="https://github.com/hyeongyu-kim" target="_blank" rel="noopener noreferrer">Hyeongyu Kim</a><sup>1,4,*</sup>,</span>
         <span>Mingyeong Jang<sup>1,*</sup>,</span>
         <span>Youngjun Song<sup>1</sup>,</span>
         <span>GeonHui Han<sup>1</sup>,</span>
         <span>Dosik Hwang<sup>1,2,3,†</sup></span>
       </div>
-      <div class="affiliations">
+      <div class="affiliations is-size-5 publication-authors">
         <p><sup>1</sup> School of Electrical and Electronic Engineering, Yonsei University</p>
         <p><sup>2</sup> Department of Radiology and Center for Clinical Imaging Data Science,<br class="desktop-break"> College of Medicine, Yonsei University</p>
         <p><sup>3</sup> Artificial Intelligence and Robotics Institute, Korea Institute of Science and Technology</p>
         <p><sup>4</sup> Semiconductor Development Group, Hyundai Motor Company</p>
       </div>
-      <p class="author-notes">* Equal contribution &nbsp;&nbsp; † Corresponding author</p>
-      <div class="publication-links" aria-label="Publication resources">
-        <span class="pill unavailable" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8l-5-5Z"/><path d="M14 3v5h5M8 13h8M8 17h6"/></svg><span>Paper <span class="button-note">coming soon</span></span></span>
-        <a class="pill" href="https://openreview.net/forum?id=ujUYtJK5LG" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4 10 14M11 5H5a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1v-6"/></svg><span>OpenReview</span></a>
-        <span class="pill unavailable" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6m-3-15-2 18"/></svg><span>Code <span class="button-note">coming soon</span></span></span>
-        <span class="pill unavailable" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19M8 3h8M8 21h8"/></svg><span>arXiv <span class="button-note">coming soon</span></span></span>
-      </div>
+      <p class="author-notes is-size-7 publication-authors">* Equal contribution<br>† Corresponding author</p>
+      <div class="column has-text-centered">
+<div class="publication-links" aria-label="Publication resources">
+<span class="link-block"><span class="button is-normal is-rounded is-dark unavailable" aria-disabled="true"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8l-5-5Z"></path><path d="M14 3v5h5M8 13h8M8 17h6"></path></svg><span>Paper (Coming soon)</span></span>
+        </span><span class="link-block"><span class="button is-normal is-rounded is-dark unavailable" aria-disabled="true"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19M8 3h8M8 21h8"></path></svg><span>arXiv (Coming soon)</span></span>
+      </span><span class="link-block"><span class="button is-normal is-rounded is-dark unavailable" aria-disabled="true"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6m-3-15-2 18"></path></svg><span>Code (Coming soon)</span></span>
+        </span><span class="link-block"><span aria-disabled="true" class="button is-normal is-rounded is-dark unavailable"><svg viewbox="0 0 576 512" width="16" height="16" fill="currentColor" focusable="false" aria-hidden="true" class="video-icon">
+                      <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                    </svg>
+                  <span>Video (Coming soon)</span></span></span><span class="link-block"><a class="button is-normal is-rounded is-dark external-link" href="https://openreview.net/forum?id=ujUYtJK5LG" target="_blank" rel="noopener noreferrer"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4 10 14M11 5H5a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1v-6"></path></svg><span>OpenReview</span></a>
+        </span>
+</div>
     </div>
-  </header>
+</div>
+  </div></header>
 
   <main>
-    <section class="teaser container" id="overview" aria-label="MIRA overview">
-      <figure>
-        <a class="figure-link" href="static/images/mira-overview.png" target="_blank" rel="noopener noreferrer" aria-label="Open the MIRA overview figure at full resolution">
-          <img src="static/images/mira-overview.png" width="1667" height="942" fetchpriority="high" alt="MIRA pipeline: cache backbone features once, probe Gaussian classifier samples at candidate radii, select a radius using mutual information and top-1 agreement, then adapt using detached reliability weights and a stochastic entropy objective.">
+    <section class="section overview" id="overview" aria-label="MIRA overview"><div class="container is-max-desktop">
+      <figure class="project-figure wide-figure">
+        <a class="figure-link" href="static/images/mira-overview-camera-ready.png?v=20261012-camera-ready" target="_blank" rel="noopener noreferrer" aria-label="Open the MIRA overview figure at full resolution">
+          <img src="static/images/mira-overview-camera-ready.png?v=20261012-camera-ready" width="3859" height="1355" fetchpriority="high" alt="MIRA pipeline: cache backbone features once, probe Gaussian classifier samples at candidate radii, select a radius using mutual information and top-1 agreement, then adapt using detached reliability weights and a stochastic entropy objective." decoding="async">
         </a>
         <figcaption><strong>MIRA probes reliability at the classifier.</strong> A single backbone forward pass supplies features for repeated probes; mutual information and confidence guide each sample’s contribution to adaptation.</figcaption>
       </figure>
-    </section>
+    </div></section>
 
     <section class="section" id="abstract">
-      <div class="container reading-width">
-        <h2>Abstract</h2>
-        <div class="abstract-text">
+      <div class="container reading-width is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Abstract</h2>
+        <div class="abstract-text content has-text-justified">
           <p>Well-calibrated confidence estimates are important for reliable decision-making when models encounter distribution shift. However, entropy-based test-time adaptation can reinforce confident errors even when accuracy improves, without necessarily yielding well-calibrated predictions.</p>
           <p>We propose <strong>MIRA</strong>, <strong>Mutual Information guided calibration for Reliable Test-Time Adaptation</strong>, a source-free online method that probes prediction reliability with Gaussian perturbations of the final classifier. MIRA computes backbone features once per target batch and reuses them across classifier samples and candidate perturbation scales. A mutual-information (MI) criterion and a prediction-agreement constraint select a batch-specific probing radius without target labels or posterior fitting. The resulting local disagreement and confidence define detached sample weights for a stochastic entropy objective.</p>
           <p>The stochastic objective supplies the adaptation signal, while reliability weighting reduces the influence of perturbation-sensitive samples. Experiments with CNNs, a vision transformer, and CLIP show improvements in the accuracy–calibration trade-off. Further evaluations cover continual and dynamic adaptation, stronger representation shifts, and computational time constraints. MIRA provides a reliability module whose accuracy gains depend on the base adaptation method; its MI is an operational stability signal, rather than calibrated Bayesian posterior uncertainty.</p>
@@ -60,26 +75,35 @@
       </div>
     </section>
 
-    <section class="section soft-background" id="motivation">
-      <div class="container">
-        <h2>Accuracy and confidence under adaptation</h2>
+    <section class="section" id="motivation">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Accuracy and confidence under adaptation</h2>
         <p class="section-intro">Confidence can be too high or too low under distribution shift. The goal is to improve prediction quality and calibration together.</p>
-        <figure>
-          <a class="figure-link" href="static/images/confidence-trajectories.png" target="_blank" rel="noopener noreferrer" aria-label="Open the accuracy and confidence figure at full resolution">
-            <img src="static/images/confidence-trajectories.png" width="1650" height="350" loading="lazy" alt="Online adaptation trajectories for an overconfident ResNet and an underconfident EfficientNet. MIRA changes confidence in different directions as predictive accuracy improves.">
+        <figure class="project-figure wide-figure">
+          <a class="figure-link" href="static/images/confidence-trajectories-camera-ready.png?v=20261012-camera-ready" target="_blank" rel="noopener noreferrer" aria-label="Open the accuracy and confidence figure at full resolution">
+            <img src="static/images/confidence-trajectories-camera-ready.png?v=20261012-camera-ready" width="2376" height="713" loading="lazy" alt="Online TENT and TENT+MIRA accuracy and confidence on ImageNet-C fog: overconfident ResNet-34 and underconfident EfficientNet-B0. Shading and bars show the absolute accuracy–confidence gap." decoding="async">
           </a>
-          <figcaption>Accuracy and confidence trajectories from Figure 2 of the current manuscript. Lower confidence by itself is not a success criterion.</figcaption>
+          <figcaption>Online accuracy and confidence from Figure 2 of the camera-ready manuscript. Shading and bars show the absolute accuracy–confidence gap.</figcaption>
         </figure>
       </div>
     </section>
 
     <section class="section" id="method">
-      <div class="container reading-width">
-        <h2>How MIRA works</h2>
+      <div class="container reading-width is-max-desktop">
+        <h2 class="title is-3 has-text-centered">How MIRA works</h2>
         <ol class="method-steps">
-          <li><h3>Cache features and probe the classifier</h3><p>Compute the backbone features once, then reuse them for Gaussian weight and bias perturbations of the final classifier. The same noise draws are shared across candidate radii within a batch.</p></li>
-          <li><h3>Select an informative probing radius</h3><p>Use normalized MI to find a non-trivial response and top-1 agreement to limit prediction changes. The finite-grid implementation includes a fallback when both conditions cannot be met.</p></li>
-          <li><h3>Adapt with detached reliability weights</h3><p>Combine local disagreement and confidence into unit-mean sample weights. Keep those weights detached while minimizing the stochastic entropy objective and updating the base method’s adaptation parameters.</p></li>
+          <li>
+<h3 class="title is-5">Cache features and probe the classifier</h3>
+<p>Compute the backbone features once, then reuse them for Gaussian weight and bias perturbations of the final classifier. The same noise draws are shared across candidate radii within a batch.</p>
+</li>
+          <li>
+<h3 class="title is-5">Select an informative probing radius</h3>
+<p>Use normalized MI to find a non-trivial response and top-1 agreement to limit prediction changes. The finite-grid implementation includes a fallback when both conditions cannot be met.</p>
+</li>
+          <li>
+<h3 class="title is-5">Adapt with detached reliability weights</h3>
+<p>Combine local disagreement and confidence into unit-mean sample weights. Keep those weights detached while minimizing the stochastic entropy objective and updating the base method’s adaptation parameters.</p>
+</li>
         </ol>
         <div class="equation" aria-label="The loss is the batch average of reliability weight times entropy of the mean plus gamma times mean entropy">
           <span>MI = HE − EH</span><span class="equation-divider" aria-hidden="true"></span><span>ℒ = mean<sub>i</sub> [w<sub>i</sub> (HE<sub>i</sub> + γ EH<sub>i</sub>)]</span>
@@ -89,24 +113,54 @@
       </div>
     </section>
 
-    <section class="section soft-background" id="results">
-      <div class="container">
-        <h2>Accuracy and calibration</h2>
+    <section class="section" id="results">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Accuracy and calibration</h2>
         <p class="section-intro">A matched comparison of TENT and TENT + MIRA under the additional camera-ready evaluation.</p>
         <div class="result-source">Additional evaluation · 10 October 2026 · seeds 1, 2, 3</div>
         <p class="table-hint">Scroll horizontally to see all metrics →</p>
         <div class="table-scroll" tabindex="0" role="region" aria-label="Main comparison results; scroll horizontally on small screens">
-          <table>
+          <table class="table is-fullwidth results-table">
             <caption>Mean ± sample standard deviation. Accuracy and its SD are in percent and percentage points, respectively.</caption>
-            <thead><tr><th scope="col">Method</th><th scope="col">Accuracy (%) ↑</th><th scope="col">MMC</th><th scope="col">ECE ↓</th><th scope="col">NLL ↓</th></tr></thead>
+            <thead><tr>
+<th scope="col">Method</th>
+<th scope="col">Accuracy (%) ↑</th>
+<th scope="col">MMC</th>
+<th scope="col">ECE ↓</th>
+<th scope="col">NLL ↓</th>
+</tr></thead>
             <tbody>
               <!-- BEGIN generated-main-results -->
               <tr class="dataset-row"><th colspan="5" scope="rowgroup">CIFAR-100-C / ResNeXt AugMix</th></tr>
-              <tr><th scope="row">TENT</th><td>67.844 ± 0.052</td><td>0.7461 ± 0.0007</td><td>0.0693 ± 0.0004</td><td>1.2547 ± 0.0021</td></tr>
-              <tr class="mira-row"><th scope="row">TENT + MIRA</th><td><strong class="metric-improvement">68.692 ± 0.153</strong></td><td>0.7305 ± 0.0012</td><td><strong class="metric-improvement">0.0452 ± 0.0007</strong></td><td><strong class="metric-improvement">1.1940 ± 0.0111</strong></td></tr>
+              <tr>
+<th scope="row">TENT</th>
+<td>67.844 ± 0.052</td>
+<td>0.7461 ± 0.0007</td>
+<td>0.0693 ± 0.0004</td>
+<td>1.2547 ± 0.0021</td>
+</tr>
+              <tr class="mira-row">
+<th scope="row">TENT + MIRA</th>
+<td><strong class="metric-improvement">68.692 ± 0.153</strong></td>
+<td>0.7305 ± 0.0012</td>
+<td><strong class="metric-improvement">0.0452 ± 0.0007</strong></td>
+<td><strong class="metric-improvement">1.1940 ± 0.0111</strong></td>
+</tr>
               <tr class="dataset-row"><th colspan="5" scope="rowgroup">ImageNet-C / ResNet-50</th></tr>
-              <tr><th scope="row">TENT</th><td>36.618 ± 0.120</td><td>0.4089 ± 0.0014</td><td>0.0478 ± 0.0018</td><td>3.2549 ± 0.0075</td></tr>
-              <tr class="mira-row"><th scope="row">TENT + MIRA</th><td><strong class="metric-improvement">39.448 ± 0.141</strong></td><td>0.4053 ± 0.0014</td><td><strong class="metric-improvement">0.0361 ± 0.0022</strong></td><td><strong class="metric-improvement">3.0205 ± 0.0020</strong></td></tr>
+              <tr>
+<th scope="row">TENT</th>
+<td>36.618 ± 0.120</td>
+<td>0.4089 ± 0.0014</td>
+<td>0.0478 ± 0.0018</td>
+<td>3.2549 ± 0.0075</td>
+</tr>
+              <tr class="mira-row">
+<th scope="row">TENT + MIRA</th>
+<td><strong class="metric-improvement">39.448 ± 0.141</strong></td>
+<td>0.4053 ± 0.0014</td>
+<td><strong class="metric-improvement">0.0361 ± 0.0022</strong></td>
+<td><strong class="metric-improvement">3.0205 ± 0.0020</strong></td>
+</tr>
               <!-- END generated-main-results -->
             </tbody>
           </table>
@@ -117,20 +171,55 @@
           <summary>What changes when gradient norms are matched?</summary>
           <p>The stochastic objective accounts for much of the adaptation gain. The incremental effect of reliability weighting depends on the protocol. In a separate control with the global L2 norm of the adaptation gradient fixed to 1, full MIRA improves CIFAR accuracy relative to TENT, but falls below TENT on ImageNet-C. This control changes the update scale and is evaluated separately from the main comparison above.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Separate gradient norm control results">
-            <table>
+            <table class="table is-fullwidth results-table">
               <caption>Separate control: global adaptation gradient L2 norm = 1. Mean ± sample SD over seeds 1, 2, 3.</caption>
-              <thead><tr><th scope="col">Method</th><th scope="col">Accuracy (%) ↑</th><th scope="col">ECE ↓</th><th scope="col">NLL ↓</th></tr></thead>
+              <thead><tr>
+<th scope="col">Method</th>
+<th scope="col">Accuracy (%) ↑</th>
+<th scope="col">ECE ↓</th>
+<th scope="col">NLL ↓</th>
+</tr></thead>
               <tbody>
                 <!-- BEGIN generated-control-results -->
               <tr class="dataset-row"><th colspan="4" scope="rowgroup">CIFAR-10-C / WRN AugMix</th></tr>
-              <tr><th scope="row">TENT</th><td>87.787 ± 0.046</td><td>0.0635 ± 0.0006</td><td>0.4462 ± 0.0025</td></tr>
-              <tr class="mira-row"><th scope="row">TENT + MIRA</th><td><strong class="metric-improvement">88.416 ± 0.067</strong></td><td><strong class="metric-improvement">0.0396 ± 0.0011</strong></td><td><strong class="metric-improvement">0.3808 ± 0.0023</strong></td></tr>
+              <tr>
+<th scope="row">TENT</th>
+<td>87.787 ± 0.046</td>
+<td>0.0635 ± 0.0006</td>
+<td>0.4462 ± 0.0025</td>
+</tr>
+              <tr class="mira-row">
+<th scope="row">TENT + MIRA</th>
+<td><strong class="metric-improvement">88.416 ± 0.067</strong></td>
+<td><strong class="metric-improvement">0.0396 ± 0.0011</strong></td>
+<td><strong class="metric-improvement">0.3808 ± 0.0023</strong></td>
+</tr>
               <tr class="dataset-row"><th colspan="4" scope="rowgroup">CIFAR-100-C / ResNeXt AugMix</th></tr>
-              <tr><th scope="row">TENT</th><td>65.972 ± 0.106</td><td>0.0586 ± 0.0005</td><td>1.3250 ± 0.0029</td></tr>
-              <tr class="mira-row"><th scope="row">TENT + MIRA</th><td><strong class="metric-improvement">66.180 ± 0.106</strong></td><td><strong class="metric-improvement">0.0322 ± 0.0009</strong></td><td><strong class="metric-improvement">1.2937 ± 0.0025</strong></td></tr>
+              <tr>
+<th scope="row">TENT</th>
+<td>65.972 ± 0.106</td>
+<td>0.0586 ± 0.0005</td>
+<td>1.3250 ± 0.0029</td>
+</tr>
+              <tr class="mira-row">
+<th scope="row">TENT + MIRA</th>
+<td><strong class="metric-improvement">66.180 ± 0.106</strong></td>
+<td><strong class="metric-improvement">0.0322 ± 0.0009</strong></td>
+<td><strong class="metric-improvement">1.2937 ± 0.0025</strong></td>
+</tr>
               <tr class="dataset-row"><th colspan="4" scope="rowgroup">ImageNet-C / ResNet-50</th></tr>
-              <tr><th scope="row">TENT</th><td><strong class="metric-improvement">32.336 ± 0.121</strong></td><td><strong class="metric-improvement">0.0298 ± 0.0001</strong></td><td><strong class="metric-improvement">3.5997 ± 0.0040</strong></td></tr>
-              <tr class="mira-row"><th scope="row">TENT + MIRA</th><td>32.132 ± 0.132</td><td>0.0324 ± 0.0014</td><td>3.6162 ± 0.0036</td></tr>
+              <tr>
+<th scope="row">TENT</th>
+<td><strong class="metric-improvement">32.336 ± 0.121</strong></td>
+<td><strong class="metric-improvement">0.0298 ± 0.0001</strong></td>
+<td><strong class="metric-improvement">3.5997 ± 0.0040</strong></td>
+</tr>
+              <tr class="mira-row">
+<th scope="row">TENT + MIRA</th>
+<td>32.132 ± 0.132</td>
+<td>0.0324 ± 0.0014</td>
+<td>3.6162 ± 0.0036</td>
+</tr>
               <!-- END generated-control-results -->
               </tbody>
             </table>
@@ -140,10 +229,16 @@
       </div>
     </section>
 
-    <section class="section" id="bibtex">
-      <div class="container reading-width">
-        <div class="citation-heading"><h2>BibTeX</h2><button id="copy-bibtex" type="button">Copy citation</button></div>
-        <pre><code id="citation">@inproceedings{kim2026mira,
+    <section id="video" class="section" aria-labelledby="video-title"><div class="container is-max-desktop">
+<h2 id="video-title" class="title is-3 has-text-centered">Video</h2>
+<p class="video-coming-soon section-text">Coming soon</p>
+</div></section><section class="section" id="bibtex">
+      <div class="container reading-width is-max-desktop">
+        <div class="citation-heading">
+<h2 class="title is-3 has-text-centered">BibTeX</h2>
+<button id="copy-bibtex" type="button" class="button is-small">Copy citation</button>
+</div>
+        <pre class="bibtex"><code id="citation">@inproceedings{kim2026mira,
   title = {MIRA: Mutual Information guided calibration for Reliable Test-Time Adaptation},
   author = {Kim, Hyeongyu and Jang, Mingyeong and Song, Youngjun and Han, GeonHui and Hwang, Dosik},
   booktitle = {Advances in Neural Information Processing Systems},
@@ -155,6 +250,10 @@
     </section>
   </main>
 
-  <footer><div class="container"><p>© 2026 MIRA authors</p><p>Project page layout follows <a href="https://hyeongyu-kim.github.io/actta/" target="_blank" rel="noopener noreferrer">AcTTA</a>.</p></div></footer>
+  <footer class="footer"><div class="container">
+<p>© 2026 MIRA authors</p>
+<p>Project page layout follows <a href="https://hyeongyu-kim.github.io/actta/" target="_blank" rel="noopener noreferrer">AcTTA</a>.</p>
+</div></footer>
 </body>
 </html>
+
