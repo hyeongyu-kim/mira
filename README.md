@@ -79,14 +79,7 @@ See [Setup](docs/SETUP.md) for individual commands and
 
 ## Citation
 
-```bibtex
-@inproceedings{kim2026mira,
-  title={MIRA: Mutual Information guided calibration for Reliable Test-Time Adaptation},
-  author={Kim, Hyeongyu and Jang, Mingyeong and Song, Youngjun and Han, GeonHui and Hwang, Dosik},
-  booktitle={Advances in Neural Information Processing Systems},
-  year={2026}
-}
-```
+Coming soon.
 
 The implementation builds on the [test-time-adaptation framework](https://github.com/mariodoebler/test-time-adaptation)
 and RobustBench. See [licenses and attribution](docs/THIRD_PARTY.md).
