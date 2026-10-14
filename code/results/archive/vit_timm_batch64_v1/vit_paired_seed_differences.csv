@@ -1,2 +1,0 @@
-seed,comparison,accuracy_percent_delta,mmc_delta,ece_delta,nll_delta
-1,MIRA minus TENT; same batch64 protocol,4.061332792043686,-0.09371163050333664,-0.1326388299083798,-1.1001486937204996

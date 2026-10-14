@@ -1,7 +1,0 @@
-dataset,backbone,seed,tent_run_id,mira_run_id,mira_minus_tent_accuracy_percent,mira_minus_tent_mmc,mira_minus_tent_ece,mira_minus_tent_nll
-cifar100_c,Hendrycks2020AugMix_ResNeXt,1,release_c100_tent_s1,release_c100_full_s1,0.9713331858317105,-0.0155781149864197,-0.02500532750079098,-0.07311897277832013
-cifar100_c,Hendrycks2020AugMix_ResNeXt,2,release_c100_tent_s2,release_c100_full_s2,0.8013343811035156,-0.015111660957336404,-0.02369373955953051,-0.05509409109751373
-cifar100_c,Hendrycks2020AugMix_ResNeXt,3,release_c100_tent_s3,release_c100_full_s3,0.7760000228881836,-0.01604482332865398,-0.02341733161992276,-0.05641805728276572
-imagenet_c,resnet50,1,release_in50_tent_s1,release_in50_full_s1,2.83133327960968,-0.0037084619204203473,-0.012944796239996018,-0.23015878200531015
-imagenet_c,resnet50,2,release_candidate_in50_tent_s2,release_candidate_in50_full_s2,2.787332932154335,-0.003642016649246238,-0.011569620747347166,-0.24265538851420088
-imagenet_c,resnet50,3,release_candidate_in50_tent_s3,release_candidate_in50_full_s3,2.8753331303596497,-0.003567425409952807,-0.011126693778123808,-0.2313629388809204

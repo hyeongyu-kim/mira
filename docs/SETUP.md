@@ -102,7 +102,14 @@ motion_blur, zoom_blur, snow, frost, fog, brightness, contrast,
 elastic_transform, pixelate, jpeg_compression
 ```
 
-[Model and ablation settings](RESULTS.md#experiment-settings) · [MIRA defaults](CODE_SEMANTICS.md)
+[Model and ablation settings](RESULTS.md#experiment-settings)
+
+MIRA defaults: α=0.03, ρ=0.90, τ=0.25, γ=1, K=300; feature-wise He-in scaling.
+
+```text
+σ = [1e-5, 1e-4, 3e-4, 1e-3, 3e-3, 1e-2, 3e-2, 5e-2,
+     1e-1, 3e-1, 5e-1, 1, 2, 3, 4, 5]
+```
 
 ## Outputs
 

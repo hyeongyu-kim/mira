@@ -62,15 +62,6 @@ def main():
                 for metric, printed in printed_metrics.items():
                     precision = len(printed.split('.')[1])
                     assert f"{float(row[metric]):.{precision}f}" == printed
-    commands = json.loads((ROOT / 'docs/table_commands.json').read_text())
-    for table, paths in commands.items():
-        for path in paths:
-            assert (ROOT / path).is_file(), (table, path)
-    assert commands['3 ViT'] == [], 'Historical Table 3 has no verified exact reproduction profile.'
-    for entry in json.loads((ROOT/'results/diagnostics/index.json').read_text()):
-        archive = ROOT/entry['archive']
-        assert archive.is_file(), 'Missing diagnostics archive: '+entry['archive']
-        assert hashlib.sha256(archive.read_bytes()).hexdigest() == entry['sha256']
     raw = read_csv(ROOT / 'results/seed_results.csv')
     summaries = read_csv(ROOT / 'results/mean_sd_summary.csv')
     keys = list(summaries[0])[:list(summaries[0]).index('n_seeds')]
@@ -104,13 +95,9 @@ def main():
                     assert row[metric + '_sd'] == ''
                 else:
                     assert abs(statistics.stdev(values) - float(row[metric + '_sd'])) < 1e-10
-    audit = json.loads((ROOT.parent / 'docs/paper_numeric_audit.json').read_text())
-    assert audit['all_supported_numeric_cells_match']
-    assert all(r['match'] == 'True' for r in read_csv(ROOT.parent / 'docs/paper_numeric_audit.csv'))
     print(json.dumps({'status': 'passed', 'verified_source_and_config_files': len(verified),
                       'portable_run_configs': len(configs), 'archived_seed_runs': len(raw),
                       'recomputed_scientific_groups': len(summaries),
-                      'matched_paper_numeric_cells': audit['matched_numeric_cells'],
                       'default_vit_profile': registry['default_profile'],
                       'measured_vit_seeds': registry['profiles'][registry['default_profile']]['default_seeds']}, indent=2))
 

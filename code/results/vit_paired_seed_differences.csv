@@ -1,2 +1,0 @@
-checkpoint_candidate,seed,mira_minus_tent_accuracy_percent,mira_minus_tent_mmc,mira_minus_tent_ece,mira_minus_tent_nll
-torchvision,1,3.119999567667641,-0.026236315568288093,-0.061847699639656646,-0.21765446662902832

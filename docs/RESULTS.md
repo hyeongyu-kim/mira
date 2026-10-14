@@ -41,7 +41,7 @@ learning rate 0.00025, batch size 64.
 Main evaluation: severity 5, 15 corruptions, 10,000 images per corruption,
 one update per batch, model and optimizer reset per corruption.
 
-[Table-to-config mapping](../code/docs/table_commands.json) · [Setup](SETUP.md)
+[Configs](../code/configs/) · [Setup](SETUP.md)
 
 ## Result files
 
@@ -50,13 +50,5 @@ Paths are relative to [code/results](../code/results/).
 | File | Contents |
 |---|---|
 | `seed_results.csv`, `mean_sd_summary.csv` | CNN reference metrics |
-| `paired_seed_differences.csv` | Paired CNN differences |
-| `release_validation_*.csv` | CNN validation metrics |
 | `vit_seed_results.csv`, `vit_mean_sd_summary.csv`, `vit_results.tex` | Selected ViT metrics and LaTeX table |
-| `vit_paired_*differences.csv` | Paired ViT differences |
-| `vit_vs_paper_table3.csv` | ViT / Table 3 numerical comparison |
-| `vit_sigma_*.csv`, `vit_runtime_memory.csv` | ViT diagnostics, runtime and memory |
 | `archive/vit_timm_batch64_v1/`, `archive/vit_batch128/` | Previous ViT profile metrics |
-| `diagnostics/` | Run configs, batch logs and validation records |
-
-[Paper numeric audit](paper_numeric_audit.csv) · [Audit metadata](paper_numeric_audit.json)

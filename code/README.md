@@ -11,6 +11,4 @@ python scripts/validate_release.py
 python -m unittest discover -s tests -v
 ```
 
-[Results](../docs/RESULTS.md) · [Reproducibility](../docs/REPRODUCIBILITY.md) ·
-[Changing the ViT version](../docs/VIT_PROFILES.md) ·
-[Paper table commands](docs/table_commands.json).
+[Results](../docs/RESULTS.md) · [ViT profiles](../docs/VIT_PROFILES.md).

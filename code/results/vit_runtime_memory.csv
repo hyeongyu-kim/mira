@@ -1,3 +1,0 @@
-checkpoint_candidate,method,runtime_compute_seconds,runtime_wall_seconds,runtime_end_to_end_seconds,peak_allocated_mib,peak_reserved_mib
-torchvision,tent,993.8416356369853,1029.0194898732007,1042.7226853426546,5497.66943359375,6184.0
-torchvision,full,1138.257353156805,1172.5395178832114,1185.9119408410043,11290.6591796875,14654.0

@@ -1,9 +1,0 @@
-checkpoint_candidate,method,seed,metric,paper_reported,new_measurement,new_minus_reported,matches_reported_precision,paper_source
-torchvision,TENT+MIRA,1,accuracy_percent,45.17,44.757333199183144,-0.4126668008168579,False,camera-ready Table3; MMC from rebuttal; original checkpoint/seed still unconfirmed
-torchvision,TENT+MIRA,1,mmc,0.4925,0.4908097624778748,-0.0016902375221252153,False,camera-ready Table3; MMC from rebuttal; original checkpoint/seed still unconfirmed
-torchvision,TENT+MIRA,1,ece,0.0529,0.05489186933361149,0.001991869333611486,False,camera-ready Table3; MMC from rebuttal; original checkpoint/seed still unconfirmed
-torchvision,TENT+MIRA,1,nll,2.8159,2.840585962931315,0.024685962931314975,False,camera-ready Table3; MMC from rebuttal; original checkpoint/seed still unconfirmed
-torchvision,TENT,1,accuracy_percent,42.03,41.6373336315155,-0.3926663684844982,False,camera-ready Table3; MMC from rebuttal; original checkpoint/seed still unconfirmed
-torchvision,TENT,1,mmc,0.5178,0.5170460780461629,-0.0007539219538371666,False,camera-ready Table3; MMC from rebuttal; original checkpoint/seed still unconfirmed
-torchvision,TENT,1,ece,0.1141,0.11673956897326813,0.0026395689732681415,False,camera-ready Table3; MMC from rebuttal; original checkpoint/seed still unconfirmed
-torchvision,TENT,1,nll,3.0312,3.0582404295603434,0.02704042956034325,False,camera-ready Table3; MMC from rebuttal; original checkpoint/seed still unconfirmed

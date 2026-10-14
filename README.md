@@ -73,7 +73,7 @@ See [Setup](docs/SETUP.md) for individual commands and
 | ImageNet-C / torchvision ViT-B/16 | TENT | 41.64 | 0.5170 | 0.1167 | 3.0582 |
 | ImageNet-C / torchvision ViT-B/16 | TENT+MIRA | 44.76 | 0.4908 | 0.0549 | 2.8406 |
 
-[Protocols and full results](docs/RESULTS.md) · [Reproducibility](docs/REPRODUCIBILITY.md) · [Result files](code/results/)
+[Protocols and full results](docs/RESULTS.md) · [Result files](code/results/)
 
 <!-- Result figures reserved. -->
 

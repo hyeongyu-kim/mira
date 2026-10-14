@@ -530,7 +530,7 @@
     },
     {
       "path": "scripts/validate_release.py",
-      "sha256": "f424083a96b9b4c5136c71c7afe5aad566c91544a5f346b5b45bfa3236e35ae0"
+      "sha256": "48b95ec81b25c7bde8b56d3adddcd6f159778c971854063481e9b95a9eea9003"
     }
   ],
   "release_revision": "torchvision_vit_batch64_v2_20261013",
