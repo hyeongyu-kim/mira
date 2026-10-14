@@ -1,11 +1,9 @@
-# Results and scientific protocols
+# Results
 
-## CNN camera-ready reference
+## CNN reference
 
-These are the archived **three-seed TENT rows of Table 2 / 26**, in
-`NeurIPS_2026_MIRA_camera_ready_v1.pdf`, pages 8 / 24; Table 27 (page 25) lists the corresponding seed values. Each entry is mean ± sample SD (ddof=1).
-Accuracy and its SD use percent and percentage points. The reference seed CSV is kept
-separate from the fresh release-validation CSV.
+Source: camera-ready Tables 2 and 26. Values are mean ± sample SD (`ddof=1`).
+Accuracy is in percent; accuracy SD is in percentage points.
 
 | Dataset / source | Method | Accuracy (%) | MMC | ECE | NLL |
 |---|---|---:|---:|---:|---:|
@@ -14,114 +12,51 @@ separate from the fresh release-validation CSV.
 | ImageNet-C / ResNet-50 V1 | TENT | 36.62 ± 0.12 | 0.4089 ± 0.0014 | 0.0478 ± 0.0018 | 3.2549 ± 0.0075 |
 | ImageNet-C / ResNet-50 V1 | TENT+MIRA | 39.45 ± 0.14 | 0.4053 ± 0.0014 | 0.0361 ± 0.0022 | 3.0205 ± 0.0020 |
 
-CIFAR-100-C uses the ResNeXt AugMix source, SGD at 0.001 and batch 64. ImageNet-C uses
-ResNet-50 V1, SGD at 0.00025 and batch 64. Both use momentum 0.9, Nesterov, zero weight
-decay, one update per batch, 15 severity-5 corruptions, 10,000 samples per corruption and
-source/optimizer reset between corruptions. This public ResNeXt recipe is the camera-ready
-TENT learning-rate protocol; older submission/rebuttal protocols must not be pooled with it. The additional Table 28
-TENT rows use seeds 2/4/6; they are a separate retained comparison, outside this default
-profile and its seeds 1/2/3. No exact Table 28 replay command is claimed here.
+## ViT reference
 
-## Selected torchvision ViT batch-64 reference
-
-These are **newly measured seed-1 results** selected for the code release. No multi-seed
-uncertainty is implied:
+Profile: `vit_b16_torchvision_batch64_v2`. ImageNet-C, torchvision ViT-B/16,
+learning rate 0.00025, batch size 64.
 
 | Method | Accuracy (%) | MMC | ECE | NLL |
 |---|---:|---:|---:|---:|
 | TENT | 41.64 | 0.5170 | 0.1167 | 3.0582 |
 | TENT+MIRA | 44.76 | 0.4908 | 0.0549 | 2.8406 |
 
-The source is torchvision `vit_b_16`, checkpoint
-`vit_b_16-c867db91.pth`. SGD is 0.00025 with momentum 0.9, Nesterov and zero
-weight decay. The evaluation uses batch 64, one update per batch, 15 severity-5 corruptions,
-10,000 samples each and reset per corruption. Input mean is (.485,.456,.406),
-std (.229,.224,.225); already-224×224 images use PIL RGB and ToTensor.
-Only LayerNorm weight and bias adapt (50 tensors, 38,400 parameters).
+## Experiment settings
 
-MIRA uses α=.03, ρ=.90, τ=.25, γ=1, K=300, feature-wise He-in perturbations and the
-original 16-radius grid. No hyperparameter was selected from target labels. The paired
-changes are +3.1200 accuracy percentage points, −0.061848 ECE and −0.217654 NLL.
-Accuracy, ECE and NLL each improve in 14/15 corruptions. Frost accuracy decreases by
-2.66 points and NLL increases by 0.1286; brightness ECE increases by 0.0122.
-No-feasible/fallback frequency is 99.6178%; selected sigma mean is 0.9738,
-median 1, and range [0.3,1]. No endpoint/first-or-last-interval selections occur;
-interpolation occurs in 9/2,355 batches. This is performance of the existing fallback path
-on most batches, not evidence of joint feasibility or an unconditional agreement guarantee.
+| Experiment | Dataset / backbone | Settings |
+|---|---|---|
+| Main CNN | CIFAR-100-C / ResNeXt AugMix | SGD, LR 0.001, batch 64, K=300 |
+| Main CNN | ImageNet-C / ResNet-50 | SGD, LR 0.00025, batch 64, K=300 |
+| Main ViT | ImageNet-C / torchvision ViT-B/16 | SGD, LR 0.00025, batch 64, K=300 |
+| Objective / gate, Tables 1 and 6 | ImageNet-C / ResNet-34 | SGD, LR 0.00025 |
+| Gradient norm, Table 7 | CIFAR-10-C / WRN, CIFAR-100-C / ResNeXt, ImageNet-C / ResNet-50 | Global adaptation-gradient L2 norm = 1 |
+| Objective / gate, Table 8 | CIFAR-10-C / WRN AugMix | Adam, LR 0.001, K=100; gaussian noise, snow, fog, pixelation |
+| Perturbation granularity, Table 9 | CIFAR-100-C / WRN AugMix | Feature / scalar / class; He-in; K=100 |
+| Perturbation scale, Table 10 | CIFAR-100-C / WRN AugMix | He-in / fan-in / absolute / weight magnitude; feature-wise; K=100 |
+| α–ρ, Table 13 | CIFAR-100-C / ResNeXt, ImageNet-C / ResNet-50 | α ∈ {0.01, 0.03, 0.10}; ρ ∈ {0.85, 0.90, 0.95}; K=300 |
+| γ, Table 14 | CIFAR-100-C / ResNeXt, ImageNet-C / ResNet-50 | γ ∈ {0, 0.25, 0.5, 1, 2}; HE + γ·EH; K=300 |
+| σ grid, Tables 15 and 16 | CIFAR-100-C / ResNeXt, ImageNet-C / ResNet-50 | Original / coarse / dense / extended; K=300 |
 
-Historical paper Table 3, page 9, reports 42.03/45.17% accuracy, ECE .1141/.0529 and
-NLL 3.0312/2.8159. MMC .5178/.4925 comes from the rebuttal rather than Table 3.
-The supplied configuration image confirms ImageNet-C, LR0.00025 and batch64; it does
-not identify checkpoint, seed or complete stream. The selected reconstruction is lower by
-0.3927/0.4127 accuracy points; its gain +3.1200 is close to the reported +3.14 points.
-`vit_vs_paper_table3.csv` retains every metric difference without claiming exact historical provenance.
-The previous timm LR0.001/batch64 reference (45.96/50.02%) is in
-`results/archive/vit_timm_batch64_v1/`, under profile `vit_b16_batch64_v1`.
-Previous batch128 three-seed validation is in `results/archive/vit_batch128/`.
-Neither older protocol is pooled with this torchvision profile.
+Main evaluation: severity 5, 15 corruptions, 10,000 images per corruption,
+one update per batch, model and optimizer reset per corruption.
 
-## Supported appendix comparisons
+[Table-to-config mapping](../code/docs/table_commands.json) · [Setup](SETUP.md)
 
-The following mappings use the current camera-ready PDF's numbering. Every listed table
-has archived seed evidence and executable portable configs. Numerical values and sample
-SDs were independently recomputed from seed CSVs; printed cells match the PDF.
+## Result files
 
-| Table | Page | Released comparison | Scientific distinction |
-|---|---:|---|---|
-| 1 / 6 | 8 / 14 | ResNet-34 objective/gate ablation | SGD 0.00025; ordinary gradients; Table 6 adds confidence-only |
-| 2 / 26 / 27, TENT rows | 8 / 24 / 25 | ResNeXt and ResNet-50 main comparison | Separate dataset-specific learning rates |
-| 7 | 14 | Global gradient-matched objective/gates | Actual adaptation-gradient global L2 norm targeted to 1; separate controls |
-| 8 | 15 | Ordinary CIFAR-10 WRN objective/gates | Adam 0.001; four corruptions; K=100 |
-| 9 | 15 | Feature/scalar/class scale | CIFAR-100 WRN; K=100; shuffle only; fixed He-in base |
-| 10 | 15 | He-in/fan-in/absolute/weight magnitude | Same WRN protocol; feature-wise scale fixed |
-| 13 | 17 | Joint α–ρ sweep | Original 16-radius grid; K=300; two headline protocols |
-| 14 | 17 | γ sweep | HE+γ·EH; confidence exponent stays 1; ordinary gradient update |
-| 15 / 16 | 18 | Grid sensitivity and diagnostics/cost | Fixed K=300; grid-dependent normalized MI retained |
+Paths are relative to [code/results](../code/results/).
 
-CIFAR-10 controls use Gaussian noise, snow, fog and pixelation. The WRN construction
-protocol uses all 10,000 severity-5 images per corruption, shuffled once; the ResNeXt
-headline loader also performs a sampling operation. These streams remain separate.
-For Table 7, unit-mean sample weights are followed by a detached reciprocal of the complete
-adaptation-parameter global L2 gradient norm before the optimizer step. Maximum recorded
-norm error in 45 controls is 0.000248432; matching sample-weight means alone is insufficient.
+| File | Contents |
+|---|---|
+| `seed_results.csv`, `mean_sd_summary.csv` | CNN reference metrics |
+| `paired_seed_differences.csv` | Paired CNN differences |
+| `release_validation_*.csv` | CNN validation metrics |
+| `vit_seed_results.csv`, `vit_mean_sd_summary.csv`, `vit_results.tex` | Selected ViT metrics and LaTeX table |
+| `vit_paired_*differences.csv` | Paired ViT differences |
+| `vit_vs_paper_table3.csv` | ViT / Table 3 numerical comparison |
+| `vit_sigma_*.csv`, `vit_runtime_memory.csv` | ViT diagnostics, runtime and memory |
+| `archive/vit_timm_batch64_v1/`, `archive/vit_batch128/` | Previous ViT profile metrics |
+| `diagnostics/` | Run configs, batch logs and validation records |
 
-The sweeps support a common practical setting, not a universal optimum. Confidence-only
-can outperform Full on ResNet-34, and global norm matching reverses the Full-versus-unweighted
-accuracy difference on ImageNet-C. γ=2 improves ImageNet-C accuracy/NLL while worsening
-ECE. High fallback frequency limits conclusions about the agreement guard. Coarsening the
-grid harms ImageNet-C accuracy/calibration even though endpoint-selection frequencies are zero.
-These qualifications are consistent with the revised camera-ready discussion.
-
-The original sigma grid is
-[1e−5,1e−4,3e−4,1e−3,3e−3,1e−2,3e−2,5e−2,1e−1,3e−1,5e−1,1,2,3,4,5].
-The selector threshold is MI_min+α·(MI_max−MI_min); changing the grid changes this range.
-If no candidate satisfies both MI and agreement, the original selector takes the first MI-feasible
-candidate, with an MI-maximum fallback if necessary. Log-sigma interpolation requires the
-neighboring MI crossing and agreement at both endpoints. No new fallback is introduced.
-Lower/upper boundary diagnostics include fractional indices ≤1 / ≥L−2, respectively,
-covering the endpoints and first/last interpolation intervals. Grid and K sweeps are distinct.
-
-## Files
-
-All paths below are relative to [code/results](../code/results/):
-
-- `seed_results.csv`, `mean_sd_summary.csv`, `paired_seed_differences.csv`: 217 archived CNN runs.
-- `diagnostics/cnn_reference.tar.gz`: per-run portable config/provenance, corruption metrics, compressed batch logs,
-  matched-stream and actual-gradient audits.
-- `release_validation_*.csv`, `diagnostics/cnn_release_checks.tar.gz`: fresh CNN checks, kept separate from the archive.
-- `vit_seed_results.csv`, `vit_mean_sd_summary.csv`, `vit_results.tex`: current batch-64 seed-1 reference.
-- `vit_paired_*differences.csv`, `vit_paired_stream_audit.csv`, `diagnostics/vit_torchvision_batch64_v2.tar.gz`: current torchvision evidence.
-- `vit_sigma_*.csv`, `vit_runtime_memory.csv`: selected-profile diagnostics and separate compute/wall/VRAM records.
-- `archive/vit_timm_batch64_v1/`, `diagnostics/vit_timm_batch64_v1.tar.gz`: previous timm batch64 reference.
-- `archive/vit_batch128/` and `diagnostics/vit_batch128.tar.gz`: the previous measured ViT profile, never pooled with batch 64.
-
-The explicitly labeled `c100_published_table23_s1` row is an older single-run unweighted HE+EH,
-ρ=.95 historical control. Its separate scientific group is retained for traceability and is
-not the current Full MIRA headline reference or a three-seed result.
-
-[paper_numeric_audit.csv](paper_numeric_audit.csv) enumerates the printed-cell comparisons;
-[paper_numeric_audit.json](paper_numeric_audit.json) records the source PDF SHA256 and scope.
-[code/docs/table_commands.json](../code/docs/table_commands.json) provides the exact configs.
-Only TENT/MIRA and their released controls are covered; other paper plug-in comparisons,
-CLIP, historical deeper-perturbation/K studies and figure-specific streams are not advertised
-as supported reproduction commands. README figures are reserved for later assets.
+[Paper numeric audit](paper_numeric_audit.csv) · [Audit metadata](paper_numeric_audit.json)
